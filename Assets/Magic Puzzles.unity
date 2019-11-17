@@ -133,7 +133,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e37df16365fad4b21ba77ee76a31cae6, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -525,7 +525,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1674343893}
-        m_MethodName: playNote
+        m_MethodName: PlayNote
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -769,16 +769,16 @@ MonoBehaviour:
   numberPiecesPlaced: 0
   audioSource: {fileID: 265444653}
   notes:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 9d1f21045b576409796082db4274f0f0, type: 3}
+  - {fileID: 8300000, guid: 265de6d92ce6b42939ff912574f4cd16, type: 3}
+  - {fileID: 8300000, guid: acd35645a1922444f8aa8670bbbc394c, type: 3}
+  - {fileID: 8300000, guid: f336d48b1a53540ab8ce194c8fa314af, type: 3}
+  - {fileID: 8300000, guid: 8399c3b5a14fb4615add850a785d93a6, type: 3}
+  - {fileID: 8300000, guid: 78e368238b8bc40c1aeb0be2bbd085da, type: 3}
+  - {fileID: 8300000, guid: 1ca4bc5a517e44e0a9efc51c59e3c09e, type: 3}
+  - {fileID: 8300000, guid: 5e99f20e3f7954c1e9612bea98e4dd4a, type: 3}
+  - {fileID: 8300000, guid: ecf3b4d7e10684026a293f27d95b6c65, type: 3}
+  - {fileID: 8300000, guid: e37df16365fad4b21ba77ee76a31cae6, type: 3}
+  - {fileID: 8300000, guid: 97a8d9e477174493faab3c05f750ab14, type: 3}
+  - {fileID: 8300000, guid: 48f066c2fb4ec48409cd132cd250d602, type: 3}
   playNoteTestButton: {fileID: 815599772}
