@@ -27,6 +27,9 @@ public class GameManager : MonoBehaviour {
 	string[] sampleSong = { "a", "c", "d", "g", "fs", "c", "d", "e", "e", "a", "b", "bf" }; // TODO: Store all songs somewhere else once they are created
 	public Button playNoteTestButton;
 
+	[Header("Puzzle Pieces")]
+	public PuzzlePieceManager[] puzzlePieces;
+
 	// Use this for initialization
 	void Start () {
 		Debug.Log ("Welcome to Magic Puzzles");
@@ -36,7 +39,17 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (numberPiecesPlaced == 12) {
+			Debug.Log ("Puzzle completed!");
+			//AnimateAndSing();
+		}
+	}
+
+	IEnumerator AnimateAndSing(float WaitTime) {
+		// TODO: Animate
+		// Play song 3-5x
+		// Reset to a new puzzle
+		yield return new WaitForSeconds(WaitTime);
 	}
 
 	IEnumerator PlayScale(float WaitTime) {
