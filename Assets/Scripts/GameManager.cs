@@ -30,6 +30,9 @@ public class GameManager : MonoBehaviour {
 	[Header("Puzzle Pieces")]
 	public PuzzlePieceManager[] puzzlePieces;
 
+	[Header("Animations")]
+	public Image animation;
+
 	// Use this for initialization
 	void Start () {
 		Debug.Log ("Welcome to Magic Puzzles");
@@ -39,14 +42,20 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		CheckPuzzleCompletion();
+	}
+
+	void CheckPuzzleCompletion() {
 		if (numberPiecesPlaced == 12) {
 			Debug.Log ("Puzzle completed!");
-			//AnimateAndSing();
+			StartCoroutine(AnimateAndSing(1f));
+			numberPiecesPlaced = 0;
 		}
 	}
 
 	IEnumerator AnimateAndSing(float WaitTime) {
-		// TODO: Animate
+		Debug.Log ("animate and sing");
+		animation.enabled = true;
 		// Play song 3-5x
 		// TODO: Idea. When playing the song, instead of playing each note audio file in sequence, record the entire song and have it saved as its own mp3. That way the pacing can stay true to the musician's intent and we avoid the sequence feeling choppy. Individual files work better for piece locking because it is not continuous.
 		// Reset to a new puzzle
@@ -62,7 +71,6 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void PlayNote() {
-		numberPiecesPlaced++;
 		Debug.Log("Number pieces placed: " + numberPiecesPlaced);
 		Debug.Log("The note playing is: " + stephsSong[numberPiecesPlaced - 1]);
 		int noteToPlay = notesMapping[stephsSong[numberPiecesPlaced - 1]];

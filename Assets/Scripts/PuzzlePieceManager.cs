@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PuzzlePieceManager : MonoBehaviour {
 	public GameManager gameManager;
+	public PuzzlePieceViewer viewer;
 	public bool isSet; // Whether or not the piece has been rotated to the correct slot
 	public int initialSlot; // The image when the puzzle loads, never the correct image. These will be curated and set on the Inspector.
 	public int currentSlot; // The image currently visible to the user
@@ -16,15 +17,17 @@ public class PuzzlePieceManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		InspectSlot();
 	}
 
-	public void RotateSlots() { // TODO: Associate this with click event
+	public void RotateSlots() { 
+		Debug.Log("Current slot is: " + currentSlot);
+		Debug.Log("Rotating slot...");
 		if (currentSlot < 5) { // I am thinking 5 will be the number of slots, but might change depending how it feels in action
 			currentSlot++;
 		} else {
 			currentSlot = 0;
 		}
+		InspectSlot();
 	}
 
 	void InspectSlot() {
@@ -35,10 +38,10 @@ public class PuzzlePieceManager : MonoBehaviour {
 
 	void SetPiece() {
 		isSet = true; 
-		gameManager.PlayNote();
 		gameManager.numberPiecesPlaced++;
-		Debug.Log("Piece was set");
-		// TODO: Visually indicate the piece is locked in the Viewer
+		gameManager.PlayNote();
+		viewer.SetPiece();
+		Debug.Log(">>> Piece was set");
 	}
 
 }

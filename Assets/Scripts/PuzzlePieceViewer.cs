@@ -12,11 +12,16 @@ public class PuzzlePieceViewer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		image.sprite = slots[puzzlePieceManager.initialSlot];
+		//image.sprite = slots[puzzlePieceManager.initialSlot];
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		image.sprite = slots[puzzlePieceManager.currentSlot];
+		//image.sprite = slots[puzzlePieceManager.currentSlot];
+	}
+
+	public void SetPiece() {
+		//TODO: Disabling of the entire UI Image is just temporary so I can see my progress
+		image.enabled = false;
 	}
 }
