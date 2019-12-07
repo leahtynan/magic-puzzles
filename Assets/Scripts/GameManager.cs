@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour {
 		{ "bf", 10 },
 		{ "b", 11 }
 	};
-	string[] sampleSong = { "a", "c", "d", "g", "fs", "c", "d", "e", "e", "a", "b", "bf" }; // TODO: Store all songs somewhere else once they are created
+	string[] stephsSong = { "g", "bf", "d", "f", "g", "d", "ef", "c", "d", "f", "g", "g" }; // TODO: Store all songs somewhere else once they are created
 	public Button playNoteTestButton;
 
 	[Header("Puzzle Pieces")]
@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour {
 	IEnumerator AnimateAndSing(float WaitTime) {
 		// TODO: Animate
 		// Play song 3-5x
+		// TODO: Idea. When playing the song, instead of playing each note audio file in sequence, record the entire song and have it saved as its own mp3. That way the pacing can stay true to the musician's intent and we avoid the sequence feeling choppy. Individual files work better for piece locking because it is not continuous.
 		// Reset to a new puzzle
 		yield return new WaitForSeconds(WaitTime);
 	}
@@ -63,8 +64,8 @@ public class GameManager : MonoBehaviour {
 	public void PlayNote() {
 		numberPiecesPlaced++;
 		Debug.Log("Number pieces placed: " + numberPiecesPlaced);
-		Debug.Log("The note playing is: " + sampleSong[numberPiecesPlaced - 1]);
-		int noteToPlay = notesMapping[sampleSong[numberPiecesPlaced - 1]];
+		Debug.Log("The note playing is: " + stephsSong[numberPiecesPlaced - 1]);
+		int noteToPlay = notesMapping[stephsSong[numberPiecesPlaced - 1]];
 		Debug.Log(">>> Play audio clip #" + noteToPlay);
 		audioSource.clip = notes[noteToPlay];
 		audioSource.Play();
