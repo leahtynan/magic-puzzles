@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PuzzlePieceViewer : MonoBehaviour {
 	public PuzzlePieceManager puzzlePieceManager;
 	public Image image;
-	public Sprite[] slots; // As the user clicks on the piece, the images rotate in order
+	public Sprite[] slots = new Sprite[3]; // As the user clicks on the piece, the images rotate in order.
 
 	// TODO: Simply swapping out images is good for now. But at some point, it might be interesting to look into creating the illusion of rotating planes in a drum like a slot machine.
 

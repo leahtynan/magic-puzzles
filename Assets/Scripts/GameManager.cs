@@ -54,11 +54,19 @@ public class GameManager : MonoBehaviour {
 	}
 
 	IEnumerator AnimateAndSing(float WaitTime) {
-		Debug.Log ("animate and sing");
 		animation.enabled = true;
-		// Play song 3-5x
+		// TODO: Add actual animation
+		for (int i = 0; i < 2; i++) {
+			for (int j = 0; j < 12; j++) {
+				int noteToPlay = notesMapping[stephsSong[j]];
+				audioSource.clip = notes[noteToPlay];
+				audioSource.Play();
+				yield return new WaitForSeconds(WaitTime);
+			}
+			yield return new WaitForSeconds(WaitTime);
+		}
 		// TODO: Idea. When playing the song, instead of playing each note audio file in sequence, record the entire song and have it saved as its own mp3. That way the pacing can stay true to the musician's intent and we avoid the sequence feeling choppy. Individual files work better for piece locking because it is not continuous.
-		// Reset to a new puzzle
+		// TODO: Reset to a new puzzle
 		yield return new WaitForSeconds(WaitTime);
 	}
 
