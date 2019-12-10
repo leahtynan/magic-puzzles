@@ -2241,6 +2241,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e37df16365fad4b21ba77ee76a31cae6, type: 3}
   - {fileID: 8300000, guid: 97a8d9e477174493faab3c05f750ab14, type: 3}
   - {fileID: 8300000, guid: 48f066c2fb4ec48409cd132cd250d602, type: 3}
+  stephsSong: {fileID: 8300000, guid: d39f606a60f614cd0b110414945dc09c, type: 3}
   playNoteTestButton: {fileID: 815599772}
   puzzlePieces: []
   animation: {fileID: 1624592719}

@@ -24,7 +24,8 @@ public class GameManager : MonoBehaviour {
 		{ "bf", 10 },
 		{ "b", 11 }
 	};
-	string[] stephsSong = { "g", "bf", "d", "f", "g", "d", "ef", "c", "d", "f", "g", "g" }; // TODO: Store all songs somewhere else once they are created
+	string[] stephsSongNotes = { "g", "bf", "d", "f", "g", "d", "ef", "c", "d", "f", "g", "g" }; // TODO: Store all songs somewhere else once they are created
+	public AudioClip stephsSong;
 	public Button playNoteTestButton;
 
 	[Header("Puzzle Pieces")]
@@ -57,16 +58,11 @@ public class GameManager : MonoBehaviour {
 		animation.enabled = true;
 		// TODO: Add actual animation
 		for (int i = 0; i < 2; i++) {
-			for (int j = 0; j < 12; j++) {
-				int noteToPlay = notesMapping[stephsSong[j]];
-				audioSource.clip = notes[noteToPlay];
-				audioSource.Play();
-				yield return new WaitForSeconds(WaitTime);
-			}
-			yield return new WaitForSeconds(WaitTime);
+			audioSource.clip = stephsSong;
+			audioSource.Play();
+			yield return new WaitForSeconds(10f);
 		}
-		// TODO: Idea. When playing the song, instead of playing each note audio file in sequence, record the entire song and have it saved as its own mp3. That way the pacing can stay true to the musician's intent and we avoid the sequence feeling choppy. Individual files work better for piece locking because it is not continuous.
-		// TODO: Reset to a new puzzle
+		// TODO: Reset to a new puzzle (random puzzle in set that hasn't been played yet)
 		yield return new WaitForSeconds(WaitTime);
 	}
 
@@ -80,8 +76,8 @@ public class GameManager : MonoBehaviour {
 
 	public void PlayNote() {
 		Debug.Log("Number pieces placed: " + numberPiecesPlaced);
-		Debug.Log("The note playing is: " + stephsSong[numberPiecesPlaced - 1]);
-		int noteToPlay = notesMapping[stephsSong[numberPiecesPlaced - 1]];
+		Debug.Log("The note playing is: " + stephsSongNotes[numberPiecesPlaced - 1]);
+		int noteToPlay = notesMapping[stephsSongNotes[numberPiecesPlaced - 1]];
 		Debug.Log(">>> Play audio clip #" + noteToPlay);
 		audioSource.clip = notes[noteToPlay];
 		audioSource.Play();
