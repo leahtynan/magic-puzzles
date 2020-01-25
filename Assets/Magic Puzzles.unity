@@ -534,9 +534,9 @@ MonoBehaviour:
   puzzlePieceManager: {fileID: 746558122}
   image: {fileID: 746558119}
   slots:
+  - {fileID: 21300014, guid: a32fa17ce5250425686600e720a20733, type: 3}
+  - {fileID: 21300008, guid: a32fa17ce5250425686600e720a20733, type: 3}
   - {fileID: 21300000, guid: a32fa17ce5250425686600e720a20733, type: 3}
-  - {fileID: 21300002, guid: a32fa17ce5250425686600e720a20733, type: 3}
-  - {fileID: 21300018, guid: a32fa17ce5250425686600e720a20733, type: 3}
 --- !u!114 &746558122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -551,7 +551,7 @@ MonoBehaviour:
   gameManager: {fileID: 1674343893}
   viewer: {fileID: 746558121}
   isSet: 0
-  initialSlot: 0
+  initialSlot: 2
   currentSlot: 2
   correctSlot: 1
 --- !u!114 &746558123
@@ -669,9 +669,9 @@ MonoBehaviour:
   puzzlePieceManager: {fileID: 784759876}
   image: {fileID: 784759873}
   slots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300006, guid: a32fa17ce5250425686600e720a20733, type: 3}
+  - {fileID: 21300022, guid: a32fa17ce5250425686600e720a20733, type: 3}
+  - {fileID: 21300014, guid: a32fa17ce5250425686600e720a20733, type: 3}
 --- !u!114 &784759876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -686,8 +686,8 @@ MonoBehaviour:
   gameManager: {fileID: 1674343893}
   viewer: {fileID: 784759875}
   isSet: 0
-  initialSlot: 0
-  currentSlot: 3
+  initialSlot: 2
+  currentSlot: 2
   correctSlot: 0
 --- !u!114 &784759877
 MonoBehaviour:
@@ -1061,9 +1061,9 @@ MonoBehaviour:
   puzzlePieceManager: {fileID: 972778472}
   image: {fileID: 972778469}
   slots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300002, guid: a32fa17ce5250425686600e720a20733, type: 3}
+  - {fileID: 21300018, guid: a32fa17ce5250425686600e720a20733, type: 3}
+  - {fileID: 21300008, guid: a32fa17ce5250425686600e720a20733, type: 3}
 --- !u!114 &972778472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1080,7 +1080,7 @@ MonoBehaviour:
   isSet: 0
   initialSlot: 0
   currentSlot: 0
-  correctSlot: 2
+  correctSlot: 1
 --- !u!114 &972778473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1260,7 +1260,7 @@ MonoBehaviour:
   slots:
   - {fileID: 21300012, guid: a32fa17ce5250425686600e720a20733, type: 3}
   - {fileID: 21300000, guid: a32fa17ce5250425686600e720a20733, type: 3}
-  - {fileID: 21300014, guid: a32fa17ce5250425686600e720a20733, type: 3}
+  - {fileID: 21300016, guid: a32fa17ce5250425686600e720a20733, type: 3}
 --- !u!114 &1036626947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1393,9 +1393,9 @@ MonoBehaviour:
   puzzlePieceManager: {fileID: 1040759547}
   image: {fileID: 1040759544}
   slots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300022, guid: a32fa17ce5250425686600e720a20733, type: 3}
+  - {fileID: 21300010, guid: a32fa17ce5250425686600e720a20733, type: 3}
+  - {fileID: 21300008, guid: a32fa17ce5250425686600e720a20733, type: 3}
 --- !u!114 &1040759547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1410,9 +1410,9 @@ MonoBehaviour:
   gameManager: {fileID: 1674343893}
   viewer: {fileID: 1040759546}
   isSet: 0
-  initialSlot: 0
+  initialSlot: 1
   currentSlot: 1
-  correctSlot: 3
+  correctSlot: 0
 --- !u!114 &1040759548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1528,9 +1528,9 @@ MonoBehaviour:
   puzzlePieceManager: {fileID: 1113568857}
   image: {fileID: 1113568854}
   slots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: a32fa17ce5250425686600e720a20733, type: 3}
+  - {fileID: 21300004, guid: a32fa17ce5250425686600e720a20733, type: 3}
+  - {fileID: 21300016, guid: a32fa17ce5250425686600e720a20733, type: 3}
 --- !u!114 &1113568857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1545,9 +1545,9 @@ MonoBehaviour:
   gameManager: {fileID: 1674343893}
   viewer: {fileID: 1113568856}
   isSet: 0
-  initialSlot: 0
-  currentSlot: 0
-  correctSlot: 2
+  initialSlot: 2
+  currentSlot: 2
+  correctSlot: 1
 --- !u!114 &1113568858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1663,9 +1663,9 @@ MonoBehaviour:
   puzzlePieceManager: {fileID: 1209189339}
   image: {fileID: 1209189336}
   slots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300010, guid: a32fa17ce5250425686600e720a20733, type: 3}
+  - {fileID: 21300014, guid: a32fa17ce5250425686600e720a20733, type: 3}
+  - {fileID: 21300018, guid: a32fa17ce5250425686600e720a20733, type: 3}
 --- !u!114 &1209189339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1680,8 +1680,8 @@ MonoBehaviour:
   gameManager: {fileID: 1674343893}
   viewer: {fileID: 1209189338}
   isSet: 0
-  initialSlot: 0
-  currentSlot: 3
+  initialSlot: 2
+  currentSlot: 2
   correctSlot: 0
 --- !u!114 &1209189340
 MonoBehaviour:
@@ -1798,9 +1798,9 @@ MonoBehaviour:
   puzzlePieceManager: {fileID: 1312382199}
   image: {fileID: 1312382196}
   slots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300004, guid: a32fa17ce5250425686600e720a20733, type: 3}
+  - {fileID: 21300018, guid: a32fa17ce5250425686600e720a20733, type: 3}
+  - {fileID: 21300000, guid: a32fa17ce5250425686600e720a20733, type: 3}
 --- !u!114 &1312382199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1858,6 +1858,7 @@ GameObject:
   - component: {fileID: 1624592718}
   - component: {fileID: 1624592720}
   - component: {fileID: 1624592719}
+  - component: {fileID: 1624592721}
   m_Layer: 5
   m_Name: StephWhaleAnimation
   m_TagString: Untagged
@@ -1902,7 +1903,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c8f5bdaf3e8e143e5952e84647669d1d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 46a1515af60594dbdaa7c7719f1fcc17, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1916,6 +1917,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1624592717}
+--- !u!95 &1624592721
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1624592717}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fd84aad75b76d44b1a174830d64e30d8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1640512920
 GameObject:
   m_ObjectHideFlags: 0
@@ -2001,9 +2019,9 @@ MonoBehaviour:
   puzzlePieceManager: {fileID: 1640512925}
   image: {fileID: 1640512922}
   slots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300004, guid: a32fa17ce5250425686600e720a20733, type: 3}
+  - {fileID: 21300010, guid: a32fa17ce5250425686600e720a20733, type: 3}
+  - {fileID: 21300014, guid: a32fa17ce5250425686600e720a20733, type: 3}
 --- !u!114 &1640512925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2136,9 +2154,9 @@ MonoBehaviour:
   puzzlePieceManager: {fileID: 1658549103}
   image: {fileID: 1658549100}
   slots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300006, guid: a32fa17ce5250425686600e720a20733, type: 3}
+  - {fileID: 21300012, guid: a32fa17ce5250425686600e720a20733, type: 3}
+  - {fileID: 21300020, guid: a32fa17ce5250425686600e720a20733, type: 3}
 --- !u!114 &1658549103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2330,9 +2348,9 @@ MonoBehaviour:
   puzzlePieceManager: {fileID: 1902881186}
   image: {fileID: 1902881183}
   slots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300012, guid: a32fa17ce5250425686600e720a20733, type: 3}
+  - {fileID: 21300008, guid: a32fa17ce5250425686600e720a20733, type: 3}
+  - {fileID: 21300002, guid: a32fa17ce5250425686600e720a20733, type: 3}
 --- !u!114 &1902881186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2465,9 +2483,9 @@ MonoBehaviour:
   puzzlePieceManager: {fileID: 2137120578}
   image: {fileID: 2137120575}
   slots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300002, guid: a32fa17ce5250425686600e720a20733, type: 3}
+  - {fileID: 21300020, guid: a32fa17ce5250425686600e720a20733, type: 3}
+  - {fileID: 21300022, guid: a32fa17ce5250425686600e720a20733, type: 3}
 --- !u!114 &2137120578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2482,8 +2500,8 @@ MonoBehaviour:
   gameManager: {fileID: 1674343893}
   viewer: {fileID: 2137120577}
   isSet: 0
-  initialSlot: 0
-  currentSlot: 3
+  initialSlot: 2
+  currentSlot: 2
   correctSlot: 1
 --- !u!114 &2137120579
 MonoBehaviour:
