@@ -22,12 +22,14 @@ public class PuzzlePieceManager : MonoBehaviour {
 	public void RotateSlots() { 
 		Debug.Log("Current slot is: " + currentSlot);
 		Debug.Log("Rotating slot...");
-		if (currentSlot < 3) { 
-			currentSlot++;
-		} else {
-			currentSlot = 0;
+		if (!isSet) {
+			if (currentSlot < 2) { 
+				currentSlot++;
+			} else {
+				currentSlot = 0;
+			}
+			InspectSlot();
 		}
-		InspectSlot();
 	}
 
 	void InspectSlot() {

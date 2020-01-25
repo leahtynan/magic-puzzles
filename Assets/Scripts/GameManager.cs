@@ -56,14 +56,16 @@ public class GameManager : MonoBehaviour {
 
 	IEnumerator AnimateAndSing(float WaitTime) {
 		animation.enabled = true;
-		// TODO: Add actual animation
 		for (int i = 0; i < 2; i++) {
 			audioSource.clip = stephsSong;
 			audioSource.Play();
 			yield return new WaitForSeconds(10f);
 		}
-		// TODO: Reset to a new puzzle (random puzzle in set that hasn't been played yet)
-		yield return new WaitForSeconds(WaitTime);
+		// TODO: 
+		// 1. Fade out the current animation
+		// 2. Reset puzzle (all pieces should have isSet set to false, etc.)
+		// 3. Select a new puzzle (random puzzle in set that hasn't been played yet)
+		// 3. Fade in the new puzzle
 	}
 
 	IEnumerator PlayScale(float WaitTime) {
@@ -86,4 +88,5 @@ public class GameManager : MonoBehaviour {
 			playNoteTestButton.interactable = false;
 		} 
 	}
+		
 }
