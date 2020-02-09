@@ -416,6 +416,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 723974547}
+  - component: {fileID: 723974549}
+  - component: {fileID: 723974548}
   m_Layer: 0
   m_Name: StephPurpleWhale
   m_TagString: Untagged
@@ -454,6 +456,58 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &723974548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 723974546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb29c8c885474a9e85d66e784dded34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzle: {fileID: 723974546}
+  songNotes:
+  - g
+  - bf
+  - d
+  - f
+  - g
+  - d
+  - ef
+  - c
+  - d
+  - f
+  - g
+  - g
+  recordedSong: {fileID: 8300000, guid: d39f606a60f614cd0b110414945dc09c, type: 3}
+  puzzlePieces:
+  - {fileID: 1312382199}
+  - {fileID: 1902881186}
+  - {fileID: 1113568857}
+  - {fileID: 784759876}
+  - {fileID: 746558122}
+  - {fileID: 1209189339}
+  - {fileID: 1658549103}
+  - {fileID: 1640512925}
+  - {fileID: 1036626947}
+  - {fileID: 972778472}
+  - {fileID: 2137120578}
+  - {fileID: 1040759547}
+  animation: {fileID: 1624592719}
+  hasBeenPlayed: 0
+--- !u!114 &723974549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 723974546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a652bc3e1134243d6bd6b2338061d874, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &746558117
 GameObject:
   m_ObjectHideFlags: 0
@@ -2264,10 +2318,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e37df16365fad4b21ba77ee76a31cae6, type: 3}
   - {fileID: 8300000, guid: 97a8d9e477174493faab3c05f750ab14, type: 3}
   - {fileID: 8300000, guid: 48f066c2fb4ec48409cd132cd250d602, type: 3}
-  stephsSong: {fileID: 8300000, guid: d39f606a60f614cd0b110414945dc09c, type: 3}
   playNoteTestButton: {fileID: 815599772}
-  puzzlePieces: []
-  animation: {fileID: 1624592719}
+  puzzles:
+  - {fileID: 723974548}
+  availablePuzzles: 
 --- !u!1 &1902881181
 GameObject:
   m_ObjectHideFlags: 0

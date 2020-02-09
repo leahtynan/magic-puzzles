@@ -6,9 +6,8 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour {
 
 	[Header("Musical Notes")]
-	public int numberPiecesPlaced = 0; 
 	public AudioSource audioSource;
-	public AudioClip[] notes = new AudioClip[12]; 
+	public AudioClip[] notes = new AudioClip[kNumberPieces]; 
 	Dictionary <string, int> notesMapping = new Dictionary<string, int>()
 	{
 		{ "c", 0 },
@@ -24,15 +23,15 @@ public class GameManager : MonoBehaviour {
 		{ "bf", 10 },
 		{ "b", 11 }
 	};
-	string[] stephsSongNotes = { "g", "bf", "d", "f", "g", "d", "ef", "c", "d", "f", "g", "g" }; // TODO: Store all songs somewhere else once they are created
-	public AudioClip stephsSong;
 	public Button playNoteTestButton;
 
-	[Header("Puzzle Pieces")]
-	public PuzzlePieceManager[] puzzlePieces;
+	[Header("Puzzles")]
+	public PuzzleManager[] puzzles;
+	private int currentPuzzle; // TODO: Choose a random puzzle at Start and set value for this int
+	public List<int> availablePuzzles; // TODO: Load available puzzles on Start, remove puzzles as they are played
+	private const int kNumberPieces = 12;
+	public int numberPiecesPlaced = 0; 
 
-	[Header("Animations")]
-	public Image animation;
 
 	// Use this for initialization
 	void Start () {
@@ -46,21 +45,34 @@ public class GameManager : MonoBehaviour {
 		CheckPuzzleCompletion();
 	}
 
+	public void PlayNote() {
+		int noteToPlay = notesMapping[puzzles[0].songNotes[numberPiecesPlaced - 1]];
+		audioSource.clip = notes[noteToPlay];
+		audioSource.Play();
+		if (numberPiecesPlaced == kNumberPieces) {
+			playNoteTestButton.interactable = false;
+		} 
+	}
+
 	void CheckPuzzleCompletion() {
-		if (numberPiecesPlaced == 12) {
+		if (numberPiecesPlaced == kNumberPieces) {
 			Debug.Log ("Puzzle completed!");
 			StartCoroutine(AnimateAndSing(1f));
 			numberPiecesPlaced = 0;
 		}
 	}
 
+	// TODO: Right now, just working with our one puzzle StephPurpleWhale which is index 0.
+	// Eventually, puzzle access will be dynamic (i.e. puzzles[currentPuzzle])
+
 	IEnumerator AnimateAndSing(float WaitTime) {
-		animation.enabled = true;
-		for (int i = 0; i < 2; i++) {
-			audioSource.clip = stephsSong;
+		puzzles[0].animation.enabled = true;
+		for (int i = 0; i < kNumberPieces; i++) {
+			audioSource.clip = puzzles[0].recordedSong;
 			audioSource.Play();
 			yield return new WaitForSeconds(10f);
 		}
+		puzzles[0].hasBeenPlayed = true;
 		// TODO: 
 		// 1. Fade out the current animation
 		// 2. Reset puzzle (all pieces should have isSet set to false, etc.)
@@ -69,24 +81,12 @@ public class GameManager : MonoBehaviour {
 	}
 
 	IEnumerator PlayScale(float WaitTime) {
-		for (int i = 0; i < 12; i++) {
+		// This isn't used for anything in the interactive. It was a quick test for musical note file access.
+		for (int i = 0; i < kNumberPieces; i++) {
 			audioSource.clip = notes[i];
 			audioSource.Play();
 			yield return new WaitForSeconds(WaitTime);
 		}
-	}
-
-	public void PlayNote() {
-		Debug.Log("Number pieces placed: " + numberPiecesPlaced);
-		Debug.Log("The note playing is: " + stephsSongNotes[numberPiecesPlaced - 1]);
-		int noteToPlay = notesMapping[stephsSongNotes[numberPiecesPlaced - 1]];
-		Debug.Log(">>> Play audio clip #" + noteToPlay);
-		audioSource.clip = notes[noteToPlay];
-		audioSource.Play();
-		if (numberPiecesPlaced == 12) {
-			Debug.Log("<color=green>Puzzle was completed!</color>");
-			playNoteTestButton.interactable = false;
-		} 
 	}
 		
 }
