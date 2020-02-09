@@ -89,6 +89,7 @@
 -define:UNITY_TEAM_LICENSE
 'Assets/Scripts/ApplicationManager.cs'
 'Assets/Scripts/GameManager.cs'
+'Assets/Scripts/PuzzleContentManager.cs'
 'Assets/Scripts/PuzzlePieceManager.cs'
 'Assets/Scripts/PuzzlePieceViewer.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
