@@ -5,35 +5,23 @@ using UnityEngine;
 public class PuzzlePieceManager : MonoBehaviour {
 	public GameManager gameManager;
 	public PuzzlePieceViewer viewer;
+	private int[] wrongAngles = { 90, 180, 270 };
+	public int angle; // Angle 0 means the piece is in the correct position
 	public bool isSet; // Whether or not the piece has been rotated to the correct slot
-	public int initialSlot; // The image when the puzzle loads, never the correct image. These will be curated and set on the Inspector.
-	public int currentSlot; // The image currently visible to the user. Note: Value here on the Inspector is meaningless, whereas initialSlot and correctSlot assignments are. This is public so the viewer can access it.
-	public int correctSlot; // The image in the series of rotating slots that is the correct fit for the puzzle. This should also be set in the Inspector.
 
-	// Use this for initialization
-	void Start () {
-		currentSlot = initialSlot;
-	}
-	
-	// Update is called once per frame
-	void Update () {
+	void Update() {
+		Inspect();
 	}
 
-	public void RotateSlots() { 
-		Debug.Log("Current slot is: " + currentSlot);
-		Debug.Log("Rotating slot...");
-		if (!isSet) {
-			if (currentSlot < 2) { 
-				currentSlot++;
-			} else {
-				currentSlot = 0;
-			}
-			InspectSlot();
-		}
+	public void RandomizeAngle() {
+		// Set the puzzle piece to any wrong angle 
+		int angleToRotate = Random.Range(0, wrongAngles.Length);
+		angle = wrongAngles[angleToRotate];
+		viewer.Rotate();
 	}
 
-	void InspectSlot() {
-		if (currentSlot == correctSlot) {
+	void Inspect() {
+		if (angle == 0) {
 			SetPiece();
 		}
 	}

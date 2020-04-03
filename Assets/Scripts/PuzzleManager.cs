@@ -14,5 +14,14 @@ public class PuzzleManager : MonoBehaviour {
 	// picking a puzzle of the same color consecutively. Even if they were different shades of the same color
 	// they could be labeled the same to keep colors well distributed.
 
+	void Start() {
+		Load();
+	}
+
+	public void Load() {
+		foreach (PuzzlePieceManager piece in puzzlePieces) {
+			piece.RandomizeAngle();
+		}
+	}
 }
 
