@@ -12,20 +12,27 @@ public class PuzzlePieceViewer : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
 	public void OnPointerEnter(PointerEventData eventData)
 	{
-		Debug.Log("Mouse enter");
 		ToggleRotationUI(true);
 	}
 
 	public void OnPointerExit(PointerEventData eventData)
 	{
-		Debug.Log("Mouse exit");
 		ToggleRotationUI(false);
 	}
 
-	public void Rotate() {
-		Debug.Log ("Rotating to: " + puzzlePieceManager.angle);
+	public void Rotate(string turnType) {
+		// Pass in increments of positive or negative 90 degrees
+		// This is not the angle of the piece, it is the vector value the piece should turn
+		// See PuzzlePieceManager for value of the angle
+		int angle = 90; // Left turn angle increment, default to overwrite if needed
+		if (turnType == "right") { // Right turn angle increment
+			angle = -90;
+		} else if (turnType == "random") {
+			// At start, use the value of the angle rather than turn increment when shuffling pieces
+			angle = puzzlePieceManager.angle;
+		}
 		RectTransform rectTransform = art.GetComponent<RectTransform>();
-		rectTransform.Rotate(new Vector3(0, 0, puzzlePieceManager.angle));
+		rectTransform.Rotate(new Vector3(0, 0, angle));
 	}
 		
 	void ToggleRotationUI(bool isShowing) {
