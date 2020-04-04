@@ -138,7 +138,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 371877033}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 3, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -190,7 +190,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePieceManager: {fileID: 19522471}
-  image: {fileID: 19522468}
+  art: {fileID: 0}
+  rotateRightButton: {fileID: 0}
+  rotateLeftButton: {fileID: 0}
 --- !u!114 &19522471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,7 +238,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 371877033}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 3, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -288,7 +290,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePieceManager: {fileID: 199129131}
-  image: {fileID: 199129128}
+  art: {fileID: 0}
+  rotateRightButton: {fileID: 0}
+  rotateLeftButton: {fileID: 0}
 --- !u!114 &199129131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -439,6 +443,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 539763565}
   - {fileID: 900642566}
   - {fileID: 1724775213}
   - {fileID: 1943070542}
@@ -471,6 +476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feb29c8c885474a9e85d66e784dded34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isLoaded: 0
   puzzle: {fileID: 371877032}
   songNotes:
   - 
@@ -529,7 +535,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 371877033}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -599,7 +605,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 371877033}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 3, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -651,7 +657,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePieceManager: {fileID: 395679826}
-  image: {fileID: 395679823}
+  art: {fileID: 0}
+  rotateRightButton: {fileID: 0}
+  rotateLeftButton: {fileID: 0}
 --- !u!114 &395679826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -697,7 +705,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 371877033}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 3, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -749,7 +757,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePieceManager: {fileID: 467846705}
-  image: {fileID: 467846702}
+  art: {fileID: 0}
+  rotateRightButton: {fileID: 0}
+  rotateLeftButton: {fileID: 0}
 --- !u!114 &467846705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -795,7 +805,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 371877033}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 3, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -847,7 +857,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePieceManager: {fileID: 507946943}
-  image: {fileID: 507946940}
+  art: {fileID: 0}
+  rotateRightButton: {fileID: 0}
+  rotateLeftButton: {fileID: 0}
 --- !u!114 &507946943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -893,7 +905,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 371877033}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 3, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -945,7 +957,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePieceManager: {fileID: 537814421}
-  image: {fileID: 537814418}
+  art: {fileID: 0}
+  rotateRightButton: {fileID: 0}
+  rotateLeftButton: {fileID: 0}
 --- !u!114 &537814421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -959,6 +973,74 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1674343893}
   viewer: {fileID: 537814420}
+  angle: 0
+  isSet: 0
+--- !u!1 &539763564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 539763565}
+  - component: {fileID: 539763567}
+  - component: {fileID: 539763566}
+  m_Layer: 0
+  m_Name: Piece
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &539763565
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 539763564}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1343782925}
+  - {fileID: 1634265569}
+  - {fileID: 667110866}
+  m_Father: {fileID: 371877033}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 330, y: 330}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &539763566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 539763564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb31bd8fe542f4117bafe1fc2d46d0c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzlePieceManager: {fileID: 539763567}
+  art: {fileID: 1343782928}
+  rotateRightButton: {fileID: 1634265570}
+  rotateLeftButton: {fileID: 667110867}
+--- !u!114 &539763567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 539763564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3d1af0def8064e48882704418c7e25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 1674343893}
+  viewer: {fileID: 539763566}
   angle: 0
   isSet: 0
 --- !u!1 &603243554
@@ -1078,6 +1160,105 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &667110865
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 667110866}
+  - component: {fileID: 667110868}
+  - component: {fileID: 667110867}
+  - component: {fileID: 667110869}
+  m_Layer: 5
+  m_Name: RotateLeftButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &667110866
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 667110865}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 17.318659}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 539763565}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 165, y: 330}
+  m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &667110867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 667110865}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: d9940d6f5c45c40ce83fd28c88058407, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &667110868
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 667110865}
+--- !u!114 &667110869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 667110865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 539763567}
+          m_MethodName: RotateLeft
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &673219672
 GameObject:
   m_ObjectHideFlags: 0
@@ -1211,6 +1392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feb29c8c885474a9e85d66e784dded34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isLoaded: 0
   puzzle: {fileID: 723974546}
   songNotes:
   - g
@@ -1335,7 +1517,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePieceManager: {fileID: 746558122}
-  image: {fileID: 746558119}
+  art: {fileID: 0}
+  rotateRightButton: {fileID: 0}
+  rotateLeftButton: {fileID: 0}
 --- !u!114 &746558122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1411,7 +1595,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 371877033}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 3, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1463,7 +1647,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePieceManager: {fileID: 771710945}
-  image: {fileID: 771710942}
+  art: {fileID: 0}
+  rotateRightButton: {fileID: 0}
+  rotateLeftButton: {fileID: 0}
 --- !u!114 &771710945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1562,7 +1748,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePieceManager: {fileID: 784759876}
-  image: {fileID: 784759873}
+  art: {fileID: 0}
+  rotateRightButton: {fileID: 0}
+  rotateLeftButton: {fileID: 0}
 --- !u!114 &784759876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1896,7 +2084,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 371877033}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 3, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1909,7 +2097,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 900642565}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -1948,7 +2136,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePieceManager: {fileID: 900642570}
-  image: {fileID: 900642567}
+  art: {fileID: 0}
+  rotateRightButton: {fileID: 0}
+  rotateLeftButton: {fileID: 0}
 --- !u!114 &900642570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2047,7 +2237,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePieceManager: {fileID: 972778472}
-  image: {fileID: 972778469}
+  art: {fileID: 0}
+  rotateRightButton: {fileID: 0}
+  rotateLeftButton: {fileID: 0}
 --- !u!114 &972778472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2238,7 +2430,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePieceManager: {fileID: 1036626947}
-  image: {fileID: 1036626944}
+  art: {fileID: 0}
+  rotateRightButton: {fileID: 0}
+  rotateLeftButton: {fileID: 0}
 --- !u!114 &1036626947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2367,7 +2561,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePieceManager: {fileID: 1040759547}
-  image: {fileID: 1040759544}
+  art: {fileID: 0}
+  rotateRightButton: {fileID: 0}
+  rotateLeftButton: {fileID: 0}
 --- !u!114 &1040759547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2496,7 +2692,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePieceManager: {fileID: 1113568857}
-  image: {fileID: 1113568854}
+  art: {fileID: 0}
+  rotateRightButton: {fileID: 0}
+  rotateLeftButton: {fileID: 0}
 --- !u!114 &1113568857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2625,7 +2823,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePieceManager: {fileID: 1209189339}
-  image: {fileID: 1209189336}
+  art: {fileID: 0}
+  rotateRightButton: {fileID: 0}
+  rotateLeftButton: {fileID: 0}
 --- !u!114 &1209189339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2754,7 +2954,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePieceManager: {fileID: 1312382199}
-  image: {fileID: 1312382196}
+  art: {fileID: 0}
+  rotateRightButton: {fileID: 0}
+  rotateLeftButton: {fileID: 0}
 --- !u!114 &1312382199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2800,6 +3002,74 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
+--- !u!1 &1343782924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1343782925}
+  - component: {fileID: 1343782929}
+  - component: {fileID: 1343782928}
+  m_Layer: 5
+  m_Name: Art
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1343782925
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1343782924}
+  m_LocalRotation: {x: 0.026176924, y: -0, z: -0, w: 0.99965733}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 539763565}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 3, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 330, y: 330}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1343782928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1343782924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 93d10e7ccca9a40e8a1482236d7330c5, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1343782929
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1343782924}
 --- !u!1 &1436029441
 GameObject:
   m_ObjectHideFlags: 0
@@ -2830,7 +3100,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 371877033}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 3, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2882,7 +3152,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePieceManager: {fileID: 1436029446}
-  image: {fileID: 1436029443}
+  art: {fileID: 0}
+  rotateRightButton: {fileID: 0}
+  rotateLeftButton: {fileID: 0}
 --- !u!114 &1436029446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3052,6 +3324,105 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1634265568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1634265569}
+  - component: {fileID: 1634265571}
+  - component: {fileID: 1634265570}
+  - component: {fileID: 1634265572}
+  m_Layer: 5
+  m_Name: RotateRightButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1634265569
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1634265568}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 17.318663}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 539763565}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 165, y: 330}
+  m_Pivot: {x: 1, y: 0.5}
+--- !u!114 &1634265570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1634265568}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 64cd6f523a6b645e48a351710fa76186, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1634265571
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1634265568}
+--- !u!114 &1634265572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1634265568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 539763567}
+          m_MethodName: RotateRight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1640512920
 GameObject:
   m_ObjectHideFlags: 0
@@ -3135,7 +3506,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePieceManager: {fileID: 1640512925}
-  image: {fileID: 1640512922}
+  art: {fileID: 0}
+  rotateRightButton: {fileID: 0}
+  rotateLeftButton: {fileID: 0}
 --- !u!114 &1640512925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3264,7 +3637,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePieceManager: {fileID: 1658549103}
-  image: {fileID: 1658549100}
+  art: {fileID: 0}
+  rotateRightButton: {fileID: 0}
+  rotateLeftButton: {fileID: 0}
 --- !u!114 &1658549103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3399,7 +3774,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 371877033}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 3, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -3451,7 +3826,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePieceManager: {fileID: 1724775217}
-  image: {fileID: 1724775214}
+  art: {fileID: 0}
+  rotateRightButton: {fileID: 0}
+  rotateLeftButton: {fileID: 0}
 --- !u!114 &1724775217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3550,7 +3927,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePieceManager: {fileID: 1902881186}
-  image: {fileID: 1902881183}
+  art: {fileID: 0}
+  rotateRightButton: {fileID: 0}
+  rotateLeftButton: {fileID: 0}
 --- !u!114 &1902881186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3626,7 +4005,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 371877033}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 3, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -3678,7 +4057,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePieceManager: {fileID: 1943070546}
-  image: {fileID: 1943070543}
+  art: {fileID: 0}
+  rotateRightButton: {fileID: 0}
+  rotateLeftButton: {fileID: 0}
 --- !u!114 &1943070546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3759,7 +4140,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 371877033}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 3, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -3811,7 +4192,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePieceManager: {fileID: 2123271451}
-  image: {fileID: 2123271448}
+  art: {fileID: 0}
+  rotateRightButton: {fileID: 0}
+  rotateLeftButton: {fileID: 0}
 --- !u!114 &2123271451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3910,7 +4293,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePieceManager: {fileID: 2137120578}
-  image: {fileID: 2137120575}
+  art: {fileID: 0}
+  rotateRightButton: {fileID: 0}
+  rotateLeftButton: {fileID: 0}
 --- !u!114 &2137120578
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,10 +9,6 @@ public class PuzzlePieceManager : MonoBehaviour {
 	public int angle; // Angle 0 means the piece is in the correct position
 	public bool isSet; // Whether or not the piece has been rotated to the correct slot
 
-	void Update() {
-		Inspect();
-	}
-
 	public void RandomizeAngle() {
 		// Set the puzzle piece to any wrong angle 
 		int angleToRotate = Random.Range(0, wrongAngles.Length);
@@ -20,8 +16,18 @@ public class PuzzlePieceManager : MonoBehaviour {
 		viewer.Rotate();
 	}
 
-	void Inspect() {
-		if (angle == 0) {
+	public void RotateRight() {
+		angle += 90;
+		viewer.Rotate();
+	}
+
+	public void RotateLeft() {
+		angle -= 90;
+		viewer.Rotate();
+	}
+
+	public void Inspect() {
+		if (angle == 0 && !isSet) {
 			SetPiece();
 		}
 	}
@@ -30,7 +36,8 @@ public class PuzzlePieceManager : MonoBehaviour {
 		isSet = true; 
 		gameManager.numberPiecesPlaced++;
 		gameManager.PlayNote();
-		// viewer.SetPiece(); TODO: In the future, may add a UI update to indicate the piece has been locked
+		viewer.Rotate();
+		// TODO: In the future, may add a UI update to indicate the piece has been locked
 		Debug.Log(">>> Piece was set");
 	}
 

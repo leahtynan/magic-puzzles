@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PuzzleManager : MonoBehaviour {
+	public bool isLoaded;
 	public GameObject puzzle; // Naming format: "ComposerColorAnimal"
 	public string[] songNotes = new string[12];
 	public AudioClip recordedSong;
@@ -18,10 +19,19 @@ public class PuzzleManager : MonoBehaviour {
 		Load();
 	}
 
+	void Update() {
+		if (isLoaded) {
+			foreach (PuzzlePieceManager piece in puzzlePieces) {
+				piece.Inspect();
+			}
+		}
+	}
+
 	public void Load() {
 		foreach (PuzzlePieceManager piece in puzzlePieces) {
 			piece.RandomizeAngle();
 		}
+		isLoaded = true;
 	}
 }
 
