@@ -89,18 +89,35 @@ public class GameManager : MonoBehaviour {
 	}
 		
 	IEnumerator AnimateAndSing(float WaitTime) {
+		// 1. Show the animation and hide the pieces underneath
 		puzzles[0].animation.enabled = true;
-		for (int i = 0; i < 3; i++) {
+		foreach (PuzzlePieceManager piece in puzzles[0].puzzlePieces) {
+			piece.viewer.ChangeOpacity("hidden");
+		}
+		// 2. Play the song twice
+		for (int i = 0; i < 2; i++) {
 			audioSource.clip = puzzles[0].recordedSong;
 			audioSource.Play();
 			yield return new WaitForSeconds(audioSource.clip.length);
 		}
 		puzzles[0].hasBeenPlayed = true;
 		// TODO: 
-		// 1. Fade out the current animation
-		// 2. Reset puzzle (all pieces should have isSet set to false, etc.)
-		// 3. Select a new puzzle (random puzzle in set that hasn't been played yet)
-		// 3. Fade in the new puzzle
+		// 3. Fade out the current animation
+		StartCoroutine(FadeOutAnimation(4f));
+		// 4. Reset puzzle (all pieces should have isSet set to false, etc.)
+		// 5. Select a new puzzle (random puzzle in set that hasn't been played yet)
+		// 6. Fade in the new puzzle pieces
+		// 7. Hide the new puzzle's animation
+	}
+
+	IEnumerator FadeOutAnimation(float WaitTime) {
+		Debug.Log ("Fading out animation");
+		for(int i = 0; i < 40; i++) {
+			Color temp = puzzles[0].animation.color;
+			temp.a -= 0.1f;
+			puzzles[0].animation.color = temp;
+			yield return new WaitForSeconds(0.1f);
+		}
 	}
 
 	IEnumerator PlayScale(float WaitTime) {

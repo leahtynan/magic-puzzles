@@ -34,17 +34,16 @@ public class PuzzlePieceManager : MonoBehaviour {
 
 	public void Inspect() {
 		if (angle%360 == 0 && !isSet) {
-			Debug.Log ("Piece has been placed correctly");
 			SetPiece();
 		}
 	}
 
 	void SetPiece() {
 		isSet = true; 
+		viewer.ChangeOpacity("dim");
+		viewer.ToggleRotationUI(false);
 		gameManager.numberPiecesPlaced++;
 		gameManager.PlayNote();
-		// TODO: In the future, may add a UI update to indicate the piece has been locked
-		Debug.Log(">>> Piece was set");
 	}
 
 }

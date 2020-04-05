@@ -12,7 +12,9 @@ public class PuzzlePieceViewer : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
 	public void OnPointerEnter(PointerEventData eventData)
 	{
-		ToggleRotationUI(true);
+		if (!puzzlePieceManager.isSet) {
+			ToggleRotationUI(true);
+		}
 	}
 
 	public void OnPointerExit(PointerEventData eventData)
@@ -35,9 +37,19 @@ public class PuzzlePieceViewer : MonoBehaviour, IPointerEnterHandler, IPointerEx
 		rectTransform.Rotate(new Vector3(0, 0, angle));
 	}
 		
-	void ToggleRotationUI(bool isShowing) {
+	public void ToggleRotationUI(bool isShowing) {
 		rotateLeftButton.enabled = isShowing;
 		rotateRightButton.enabled = isShowing;
+	}
+
+	public void ChangeOpacity(string state) {
+		if (state == "dim") {
+			Color temp = art.color;
+			temp.a = 0.5f;
+			art.color = temp;
+		} else if (state == "hidden") {
+			art.enabled = false;
+		}
 	}
 
 }
