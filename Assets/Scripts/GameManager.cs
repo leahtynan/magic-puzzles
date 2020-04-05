@@ -6,8 +6,11 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour {
 
 	[Header("Musical Notes")]
-	public AudioSource audioSource;
-	public AudioClip[] notes = new AudioClip[kNumberPieces]; 
+	public AudioSource audioSource; // Plays the audio
+	public AudioClip[] lowOctave = new AudioClip[12]; 
+	public AudioClip[] middleOctave = new AudioClip[12]; 
+	public AudioClip[] highOctave = new AudioClip[12]; 
+	private AudioClip[,] notes = new AudioClip[3, 12]; // Notes in all octaves, loaded at Start
 	Dictionary <string, int> notesMapping = new Dictionary<string, int>()
 	{
 		{ "c", 0 },
@@ -36,18 +39,32 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Debug.Log ("Welcome to Magic Puzzles");
-		//StartCoroutine(PlayScale(0.5f));
+		StartCoroutine(PlayScale(0.5f));
+		LoadNotes();
 		// TODO: Start with loading just one puzzle. Once this is running smoothly, think through whether or not there should be a menu to choose puzzle before adding more puzzles.
 	}
-	
+
+	void LoadNotes() {
+		// Loads three octaves of musical notes into a 2D array
+		for (int i = 0; i < lowOctave.Length; i++) {
+			notes[0, i] = lowOctave[i];
+		}
+		for (int i = 0; i < middleOctave.Length; i++) {
+			notes[1, i] = middleOctave[i];
+		}
+		for (int i = 0; i < highOctave.Length; i++) {
+			notes[2, i] = highOctave[i];
+		}
+	}
+
 	// Update is called once per frame
 	void Update () {
 		CheckPuzzleCompletion();
 	}
 
 	public void PlayNote() {
-		int noteToPlay = notesMapping[puzzles[0].songNotes[numberPiecesPlaced - 1]];
-		audioSource.clip = notes[noteToPlay];
+		//int noteToPlay = notesMapping[puzzles[0].songNotes[numberPiecesPlaced - 1]];
+		//audioSource.clip = notes[noteToPlay];
 		audioSource.Play();
 		if (numberPiecesPlaced == kNumberPieces) {
 			playNoteTestButton.interactable = false;
@@ -61,10 +78,7 @@ public class GameManager : MonoBehaviour {
 			numberPiecesPlaced = 0;
 		}
 	}
-
-	// TODO: Right now, just working with our one puzzle StephPurpleWhale which is index 0.
-	// Eventually, puzzle access will be dynamic (i.e. puzzles[currentPuzzle])
-
+		
 	IEnumerator AnimateAndSing(float WaitTime) {
 		puzzles[0].animation.enabled = true;
 		for (int i = 0; i < kNumberPieces; i++) {
@@ -82,10 +96,12 @@ public class GameManager : MonoBehaviour {
 
 	IEnumerator PlayScale(float WaitTime) {
 		// This isn't used for anything in the interactive. It was a quick test for musical note file access.
-		for (int i = 0; i < kNumberPieces; i++) {
-			audioSource.clip = notes[i];
-			audioSource.Play();
-			yield return new WaitForSeconds(WaitTime);
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 12; j++) {
+				audioSource.clip = notes[i, j];
+				audioSource.Play();
+				yield return new WaitForSeconds(WaitTime);
+			}
 		}
 	}
 		

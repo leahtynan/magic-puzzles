@@ -3673,19 +3673,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 265444653}
-  notes:
-  - {fileID: 8300000, guid: 9d1f21045b576409796082db4274f0f0, type: 3}
-  - {fileID: 8300000, guid: 265de6d92ce6b42939ff912574f4cd16, type: 3}
-  - {fileID: 8300000, guid: acd35645a1922444f8aa8670bbbc394c, type: 3}
-  - {fileID: 8300000, guid: f336d48b1a53540ab8ce194c8fa314af, type: 3}
-  - {fileID: 8300000, guid: 8399c3b5a14fb4615add850a785d93a6, type: 3}
-  - {fileID: 8300000, guid: 78e368238b8bc40c1aeb0be2bbd085da, type: 3}
-  - {fileID: 8300000, guid: 1ca4bc5a517e44e0a9efc51c59e3c09e, type: 3}
-  - {fileID: 8300000, guid: 5e99f20e3f7954c1e9612bea98e4dd4a, type: 3}
-  - {fileID: 8300000, guid: ecf3b4d7e10684026a293f27d95b6c65, type: 3}
-  - {fileID: 8300000, guid: e37df16365fad4b21ba77ee76a31cae6, type: 3}
-  - {fileID: 8300000, guid: 97a8d9e477174493faab3c05f750ab14, type: 3}
-  - {fileID: 8300000, guid: 48f066c2fb4ec48409cd132cd250d602, type: 3}
+  lowOctave:
+  - {fileID: 8300000, guid: 4deac77911e214ee2897638ae4239e5b, type: 3}
+  - {fileID: 8300000, guid: 85e550026e5eb40c7a0b340bcd4624a9, type: 3}
+  - {fileID: 8300000, guid: eb55111cf95f74ab09e36ca9066465b5, type: 3}
+  - {fileID: 8300000, guid: 3c4a7f0d71cc140d1a4524b4315a3003, type: 3}
+  - {fileID: 8300000, guid: 03c1b91517cae467784578c20205b7f1, type: 3}
+  - {fileID: 8300000, guid: a5f9fc24ed41441138b3e71636c92ca4, type: 3}
+  - {fileID: 8300000, guid: f2cca78a7f8bb4768818710e950e70ff, type: 3}
+  - {fileID: 8300000, guid: 28c5732a473ce4400b5c3a1b5c77923b, type: 3}
+  - {fileID: 8300000, guid: b8628e17bbcad4fa7bc8c864d3c6df3b, type: 3}
+  - {fileID: 8300000, guid: ae0ef413d73124fc7a645abe8525d34e, type: 3}
+  - {fileID: 8300000, guid: 052d0afb0df5e43abb2f9b67767fdc1f, type: 3}
+  - {fileID: 8300000, guid: ee05f14bf463c4255bf1372b2e25dd74, type: 3}
+  middleOctave:
+  - {fileID: 8300000, guid: 0da846f60d9b342a5b4321eba0c874c7, type: 3}
+  - {fileID: 8300000, guid: df6e743c3b8e641ecae2abaeac502f4d, type: 3}
+  - {fileID: 8300000, guid: b8c012d4bb1f7448d8047a47569c5c3b, type: 3}
+  - {fileID: 8300000, guid: 1e522a9491d7a4d7085bca604f77c3e8, type: 3}
+  - {fileID: 8300000, guid: e4575e28a7f954345a4a6ec9bc6b3172, type: 3}
+  - {fileID: 8300000, guid: 6ba88d28da2724f9d9a0c2ca4080974d, type: 3}
+  - {fileID: 8300000, guid: 032d71b6fecbc4f48a0764b26eda4d0a, type: 3}
+  - {fileID: 8300000, guid: 5965d03296ecf4da68bc3781a85f4f25, type: 3}
+  - {fileID: 8300000, guid: dba2b4db29c874489930142cbc7e794f, type: 3}
+  - {fileID: 8300000, guid: aac3c8dc042fe4340b18fc4b747e95d8, type: 3}
+  - {fileID: 8300000, guid: 4fbf0b21d3ae2460f96082d5948e0fcc, type: 3}
+  - {fileID: 8300000, guid: a9dab390456b94d9b9c1838e5e5ed823, type: 3}
+  highOctave:
+  - {fileID: 8300000, guid: 6df0b61ef304a4cf49734b54371473c6, type: 3}
+  - {fileID: 8300000, guid: 142e82ad0d67848b3bca5cc602d346a9, type: 3}
+  - {fileID: 8300000, guid: ad8a2e81fc23649bb9a25e9715dd47bc, type: 3}
+  - {fileID: 8300000, guid: d8294060acd5643679a2c70da989d072, type: 3}
+  - {fileID: 8300000, guid: 048ac7a4ffefb46648534df9144b2a8f, type: 3}
+  - {fileID: 8300000, guid: 1359d1472680c4fc9bc2ea2b84c6d016, type: 3}
+  - {fileID: 8300000, guid: a4b6b17d3c38e4947a64edeff25f6392, type: 3}
+  - {fileID: 8300000, guid: bf984e199b539456db24972c0d618fa3, type: 3}
+  - {fileID: 8300000, guid: 4d2f3ca2187044ed7a011c7fa68070eb, type: 3}
+  - {fileID: 8300000, guid: 0a5e6eb9232164a66899e0cc71ec3b25, type: 3}
+  - {fileID: 8300000, guid: 0fecae48682ce47cbab6b1a7bf79f32a, type: 3}
+  - {fileID: 8300000, guid: 2087dde0aef3b4f19adf7340a117f681, type: 3}
   playNoteTestButton: {fileID: 815599772}
   puzzles:
   - {fileID: 371877034}
