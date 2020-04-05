@@ -13,12 +13,12 @@ public class PuzzlePieceManager : MonoBehaviour {
 		// Set the puzzle piece to any wrong angle 
 		int angleToRotate = Random.Range(0, wrongAngles.Length);
 		angle = wrongAngles[angleToRotate];
-		viewer.Rotate("random");
+		StartCoroutine(viewer.Rotate("random", 1f));
 	}
 
 	public void RotateRight() {
 		if (!isSet) {
-			viewer.Rotate("right");
+			StartCoroutine(viewer.Rotate("right", 1f));
 			angle -= 90;
 			Inspect();
 		}
@@ -26,7 +26,7 @@ public class PuzzlePieceManager : MonoBehaviour {
 
 	public void RotateLeft() {
 		if (!isSet) {
-			viewer.Rotate("left");
+			StartCoroutine(viewer.Rotate("left", 1f));
 			angle += 90;
 			Inspect();
 		}
@@ -40,7 +40,6 @@ public class PuzzlePieceManager : MonoBehaviour {
 
 	void SetPiece() {
 		isSet = true; 
-		viewer.ChangeOpacity("dim");
 		viewer.ToggleRotationUI(false);
 		gameManager.numberPiecesPlaced++;
 		gameManager.PlayNote();
