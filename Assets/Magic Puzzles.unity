@@ -410,19 +410,19 @@ MonoBehaviour:
   isLoaded: 0
   puzzle: {fileID: 371877032}
   songNotes:
-  - g
-  - bf
-  - d
-  - f
-  - g
-  - d
-  - ef
-  - c
-  - d
-  - f
-  - g
-  - g
-  recordedSong: {fileID: 8300000, guid: d39f606a60f614cd0b110414945dc09c, type: 3}
+  - 1-a
+  - 2-cs
+  - 1-b
+  - 2-fs
+  - 2-e
+  - 2-cs
+  - 1-b
+  - 2-cs
+  - 2-e
+  - 2-cs
+  - 1-b
+  - 1-a
+  recordedSong: {fileID: 8300000, guid: 023555717359f4351b2eacefdf713969, type: 3}
   puzzlePieces:
   - {fileID: 539763567}
   - {fileID: 707921287}

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class GameManager : MonoBehaviour {
 
@@ -39,7 +40,7 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Debug.Log ("Welcome to Magic Puzzles");
-		StartCoroutine(PlayScale(0.5f));
+		//StartCoroutine(PlayScale(0.5f));
 		LoadNotes();
 		// TODO: Start with loading just one puzzle. Once this is running smoothly, think through whether or not there should be a menu to choose puzzle before adding more puzzles.
 	}
@@ -63,12 +64,20 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void PlayNote() {
-		//int noteToPlay = notesMapping[puzzles[0].songNotes[numberPiecesPlaced - 1]];
-		//audioSource.clip = notes[noteToPlay];
+		string[] noteToPlay = MapNoteToPlay(puzzles[0].songNotes[numberPiecesPlaced - 1]);
+		int octave = Convert.ToInt32(noteToPlay[0]);
+		int note = Convert.ToInt32(notesMapping[noteToPlay[1]]);
+		audioSource.clip = notes[octave, note];
 		audioSource.Play();
 		if (numberPiecesPlaced == kNumberPieces) {
 			playNoteTestButton.interactable = false;
 		} 
+	}
+
+	string[] MapNoteToPlay(string shortHand) {
+		// Converts shorthand for note (e.g. 1-af, middle octave's A flat) into octave number and musical note
+		string[] mapping = shortHand.Split('-');
+		return mapping;
 	}
 
 	void CheckPuzzleCompletion() {
@@ -81,10 +90,10 @@ public class GameManager : MonoBehaviour {
 		
 	IEnumerator AnimateAndSing(float WaitTime) {
 		puzzles[0].animation.enabled = true;
-		for (int i = 0; i < kNumberPieces; i++) {
+		for (int i = 0; i < 3; i++) {
 			audioSource.clip = puzzles[0].recordedSong;
 			audioSource.Play();
-			yield return new WaitForSeconds(10f);
+			yield return new WaitForSeconds(audioSource.clip.length);
 		}
 		puzzles[0].hasBeenPlayed = true;
 		// TODO: 
