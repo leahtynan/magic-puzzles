@@ -31,18 +31,39 @@ public class GameManager : MonoBehaviour {
 
 	[Header("Puzzles")]
 	public PuzzleManager[] puzzles;
-	private int currentPuzzle; // TODO: Choose a random puzzle at Start and set value for this int
-	public List<int> availablePuzzles; // TODO: Load available puzzles on Start, remove puzzles as they are played
+	public int puzzleNumber = 0; // Which puzzle the user is on
 	private const int kNumberPieces = 12;
 	public int numberPiecesPlaced = 0; 
-
 
 	// Use this for initialization
 	void Start () {
 		Debug.Log ("Welcome to Magic Puzzles");
 		//StartCoroutine(PlayScale(0.5f));
 		LoadNotes();
-		// TODO: Start with loading just one puzzle. Once this is running smoothly, think through whether or not there should be a menu to choose puzzle before adding more puzzles.
+		ResetPiecesStatus();
+		HideInactivePuzzles();
+	}
+
+	void HideInactivePuzzles() {
+		// Each puzzle (except for the first one) should have its pieces at alpha 0 
+		// so they can be faded in as a transition when they are loaded later on
+		for (int i = 1; i < puzzles.Length; i++) {
+			puzzles[i].animation.enabled = false;
+			foreach (PuzzlePieceManager piece in puzzles[i].puzzlePieces) {
+				Color temp = piece.viewer.art.color;
+				temp.a = 0;
+				piece.viewer.art.color = temp;
+			}
+		}
+	}
+
+	void ResetPiecesStatus() {
+		// Set the pieces in every puzzle to not set
+		foreach (PuzzleManager puzzle in puzzles) {
+			for (int i = 0; i < kNumberPieces; i++) {
+				puzzle.puzzlePieces[i].isSet = false;
+			}
+		}
 	}
 
 	void LoadNotes() {
@@ -64,7 +85,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void PlayNote() {
-		string[] noteToPlay = MapNoteToPlay(puzzles[0].songNotes[numberPiecesPlaced - 1]);
+		string[] noteToPlay = MapNoteToPlay(puzzles[puzzleNumber].songNotes[numberPiecesPlaced - 1]);
 		int octave = Convert.ToInt32(noteToPlay[0]);
 		int note = Convert.ToInt32(notesMapping[noteToPlay[1]]);
 		audioSource.clip = notes[octave, note];
@@ -90,34 +111,52 @@ public class GameManager : MonoBehaviour {
 		
 	IEnumerator AnimateAndSing(float WaitTime) {
 		// 1. Show the animation and hide the pieces underneath
-		puzzles[0].animation.enabled = true;
-		foreach (PuzzlePieceManager piece in puzzles[0].puzzlePieces) {
+		puzzles[puzzleNumber].animation.enabled = true;
+		foreach (PuzzlePieceManager piece in puzzles[puzzleNumber].puzzlePieces) {
 			piece.viewer.ChangeOpacity("hidden");
 		}
 		// 2. Play the song twice
 		for (int i = 0; i < 2; i++) {
-			audioSource.clip = puzzles[0].recordedSong;
+			audioSource.clip = puzzles[puzzleNumber].recordedSong;
 			audioSource.Play();
 			yield return new WaitForSeconds(audioSource.clip.length);
 		}
-		puzzles[0].hasBeenPlayed = true;
-		// TODO: 
-		// 3. Fade out the current animation
-		StartCoroutine(FadeOutAnimation(4f));
-		// 4. Reset puzzle (all pieces should have isSet set to false, etc.)
-		// 5. Select a new puzzle (random puzzle in set that hasn't been played yet)
-		// 6. Fade in the new puzzle pieces
-		// 7. Hide the new puzzle's animation
+		puzzles[puzzleNumber].hasBeenPlayed = true;
+		// 3. Transition to the next puzzle
+		StartCoroutine(TransitionPuzzles(4f));
+		// 4. Fade in and shuffle the new puzzle pieces 
+	}
+		
+	IEnumerator TransitionPuzzles(float WaitTime) {
+		Debug.Log ("Fading out animation");
+		for(int i = 0; i < 80; i++) {
+			Debug.Log ("Puzzle number: " + puzzleNumber);
+			Color temp = puzzles[puzzleNumber].animation.color;
+			temp.a -= 0.05f;
+			puzzles[puzzleNumber].animation.color = temp;
+			yield return new WaitForSeconds(0.05f);
+		}
+		Debug.Log ("Fading is done");
+		puzzleNumber++;
+		StartCoroutine(SetupNewPuzzle(4f));
 	}
 
-	IEnumerator FadeOutAnimation(float WaitTime) {
-		Debug.Log ("Fading out animation");
-		for(int i = 0; i < 40; i++) {
-			Color temp = puzzles[0].animation.color;
-			temp.a -= 0.1f;
-			puzzles[0].animation.color = temp;
-			yield return new WaitForSeconds(0.1f);
+	IEnumerator SetupNewPuzzle(float WaitTime) {
+		Debug.Log ("Showing new puzzle");
+		// 1. Set game object to active
+		for(int i = 0; i < 80; i++) {
+			// 2. Fade in each puzzle piece
+			foreach (PuzzlePieceManager piece in puzzles[puzzleNumber].puzzlePieces) {
+				Color temp = piece.viewer.art.color;
+				temp.a += 0.05f;
+				piece.viewer.art.color = temp;
+			}
+			yield return new WaitForSeconds(0.05f);
 		}
+		// 3. Rotate each puzzle piece
+		puzzles[puzzleNumber].Load();
+		// 4. Reset piece placement counter 
+		numberPiecesPlaced = 0; 
 	}
 
 	IEnumerator PlayScale(float WaitTime) {
