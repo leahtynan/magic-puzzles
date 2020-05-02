@@ -47,7 +47,11 @@ public class GameManager : MonoBehaviour {
 	void HideInactivePuzzles() {
 		// Each puzzle (except for the first one) should have its pieces at alpha 0 
 		// so they can be faded in as a transition when they are loaded later on
+		// The entire puzzle game object must be de-activated, otherwise
+		// mouse in/out events won't target the current puzzle if there are 
+		// puzzles active (even if invisible via transparently) with a higher z-index
 		for (int i = 1; i < puzzles.Length; i++) {
+			puzzles[i].gameObject.SetActive(false);
 			puzzles[i].animation.enabled = false;
 			foreach (PuzzlePieceManager piece in puzzles[i].puzzlePieces) {
 				Color temp = piece.viewer.art.color;
@@ -116,7 +120,7 @@ public class GameManager : MonoBehaviour {
 			piece.viewer.ChangeOpacity("hidden");
 		}
 		// 2. Play the song twice
-		for (int i = 0; i < 2; i++) {
+		for (int i = 0; i < 1; i++) {
 			audioSource.clip = puzzles[puzzleNumber].recordedSong;
 			audioSource.Play();
 			yield return new WaitForSeconds(audioSource.clip.length);
@@ -136,16 +140,18 @@ public class GameManager : MonoBehaviour {
 			puzzles[puzzleNumber].animation.color = temp;
 			yield return new WaitForSeconds(0.05f);
 		}
-		Debug.Log ("Fading is done");
+		puzzles[puzzleNumber].gameObject.SetActive(false);
 		puzzleNumber++;
+		Debug.Log ("Puzzle number: " + puzzleNumber);
 		StartCoroutine(SetupNewPuzzle(4f));
 	}
 
 	IEnumerator SetupNewPuzzle(float WaitTime) {
 		Debug.Log ("Showing new puzzle");
-		// 1. Set game object to active
+		// 1. Activate the puzzle game object
+		puzzles[puzzleNumber].gameObject.SetActive(true);
+		// 2. Fade in each puzzle piece
 		for(int i = 0; i < 80; i++) {
-			// 2. Fade in each puzzle piece
 			foreach (PuzzlePieceManager piece in puzzles[puzzleNumber].puzzlePieces) {
 				Color temp = piece.viewer.art.color;
 				temp.a += 0.05f;
@@ -153,9 +159,7 @@ public class GameManager : MonoBehaviour {
 			}
 			yield return new WaitForSeconds(0.05f);
 		}
-		// 3. Rotate each puzzle piece
-		puzzles[puzzleNumber].Load();
-		// 4. Reset piece placement counter 
+		// 3. Reset piece placement counter 
 		numberPiecesPlaced = 0; 
 	}
 
