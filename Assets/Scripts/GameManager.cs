@@ -114,21 +114,22 @@ public class GameManager : MonoBehaviour {
 	}
 		
 	IEnumerator AnimateAndSing(float WaitTime) {
-		// 1. Show the animation and hide the pieces underneath
+		// 1. Wait a moment for the last note of the song to play
+		yield return new WaitForSeconds(1f);
+		// 2. Show the animation and hide the pieces underneath
 		puzzles[puzzleNumber].animation.enabled = true;
 		foreach (PuzzlePieceManager piece in puzzles[puzzleNumber].puzzlePieces) {
 			piece.viewer.ChangeOpacity("hidden");
 		}
-		// 2. Play the song twice
-		for (int i = 0; i < 1; i++) {
+		// 3. Play the song twice
+		for (int i = 0; i < 2; i++) {
 			audioSource.clip = puzzles[puzzleNumber].recordedSong;
 			audioSource.Play();
 			yield return new WaitForSeconds(audioSource.clip.length);
 		}
 		puzzles[puzzleNumber].hasBeenPlayed = true;
-		// 3. Transition to the next puzzle
+		// 4. Transition to the next puzzle
 		StartCoroutine(TransitionPuzzles(4f));
-		// 4. Fade in and shuffle the new puzzle pieces 
 	}
 		
 	IEnumerator TransitionPuzzles(float WaitTime) {
@@ -159,8 +160,6 @@ public class GameManager : MonoBehaviour {
 			}
 			yield return new WaitForSeconds(0.05f);
 		}
-		// 3. Reset piece placement counter 
-		numberPiecesPlaced = 0; 
 	}
 
 	IEnumerator PlayScale(float WaitTime) {

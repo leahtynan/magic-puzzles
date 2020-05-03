@@ -39,10 +39,10 @@ public class PuzzlePieceManager : MonoBehaviour {
 	}
 
 	void SetPiece() {
-		isSet = true; 
-		viewer.ToggleRotationUI(false);
 		gameManager.numberPiecesPlaced++;
 		gameManager.PlayNote();
+		isSet = true; 
+		viewer.ToggleRotationUI(false);
 	}
 
 }
