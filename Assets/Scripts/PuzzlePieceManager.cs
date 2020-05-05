@@ -37,8 +37,9 @@ public class PuzzlePieceManager : MonoBehaviour {
 			SetPiece();
 		}
 	}
-
+		
 	void SetPiece() {
+		Debug.Log("Setting the piece");
 		gameManager.numberPiecesPlaced++;
 		gameManager.PlayNote();
 		isSet = true; 

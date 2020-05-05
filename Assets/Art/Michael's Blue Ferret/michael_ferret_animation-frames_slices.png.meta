@@ -1,21 +1,21 @@
 fileFormatVersion: 2
-guid: 93d10e7ccca9a40e8a1482236d7330c5
-timeCreated: 1585872684
+guid: b909415700cb9417397489fb2cd01c62
+timeCreated: 1588640825
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: michael-blue-ferret_slices_0
-    21300002: michael-blue-ferret_slices_1
-    21300004: michael-blue-ferret_slices_2
-    21300006: michael-blue-ferret_slices_3
-    21300008: michael-blue-ferret_slices_4
-    21300010: michael-blue-ferret_slices_5
-    21300012: michael-blue-ferret_slices_6
-    21300014: michael-blue-ferret_slices_7
-    21300016: michael-blue-ferret_slices_8
-    21300018: michael-blue-ferret_slices_9
-    21300020: michael-blue-ferret_slices_10
-    21300022: michael-blue-ferret_slices_11
+    21300000: michael_ferret_animation-frames_slices_0
+    21300002: michael_ferret_animation-frames_slices_1
+    21300004: michael_ferret_animation-frames_slices_2
+    21300006: michael_ferret_animation-frames_slices_3
+    21300008: michael_ferret_animation-frames_slices_4
+    21300010: michael_ferret_animation-frames_slices_5
+    21300012: michael_ferret_animation-frames_slices_6
+    21300014: michael_ferret_animation-frames_slices_7
+    21300016: michael_ferret_animation-frames_slices_8
+    21300018: michael_ferret_animation-frames_slices_9
+    21300020: michael_ferret_animation-frames_slices_10
+    21300022: michael_ferret_animation-frames_slices_11
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -98,7 +98,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: michael-blue-ferret_slices_0
+      name: michael_ferret_animation-frames_slices_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,7 +111,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: michael-blue-ferret_slices_1
+      name: michael_ferret_animation-frames_slices_1
       rect:
         serializedVersion: 2
         x: 330
@@ -124,7 +124,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: michael-blue-ferret_slices_2
+      name: michael_ferret_animation-frames_slices_2
       rect:
         serializedVersion: 2
         x: 660
@@ -137,7 +137,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: michael-blue-ferret_slices_3
+      name: michael_ferret_animation-frames_slices_3
       rect:
         serializedVersion: 2
         x: 990
@@ -150,7 +150,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: michael-blue-ferret_slices_4
+      name: michael_ferret_animation-frames_slices_4
       rect:
         serializedVersion: 2
         x: 0
@@ -163,7 +163,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: michael-blue-ferret_slices_5
+      name: michael_ferret_animation-frames_slices_5
       rect:
         serializedVersion: 2
         x: 330
@@ -176,7 +176,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: michael-blue-ferret_slices_6
+      name: michael_ferret_animation-frames_slices_6
       rect:
         serializedVersion: 2
         x: 660
@@ -189,7 +189,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: michael-blue-ferret_slices_7
+      name: michael_ferret_animation-frames_slices_7
       rect:
         serializedVersion: 2
         x: 990
@@ -202,7 +202,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: michael-blue-ferret_slices_8
+      name: michael_ferret_animation-frames_slices_8
       rect:
         serializedVersion: 2
         x: 0
@@ -215,7 +215,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: michael-blue-ferret_slices_9
+      name: michael_ferret_animation-frames_slices_9
       rect:
         serializedVersion: 2
         x: 330
@@ -228,7 +228,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: michael-blue-ferret_slices_10
+      name: michael_ferret_animation-frames_slices_10
       rect:
         serializedVersion: 2
         x: 660
@@ -241,7 +241,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: michael-blue-ferret_slices_11
+      name: michael_ferret_animation-frames_slices_11
       rect:
         serializedVersion: 2
         x: 990
