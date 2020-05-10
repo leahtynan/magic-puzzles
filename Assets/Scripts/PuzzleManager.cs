@@ -11,9 +11,7 @@ public class PuzzleManager : MonoBehaviour {
 	public PuzzlePieceManager[] puzzlePieces;
 	public Image animation;
 	public bool hasBeenPlayed; 
-	// TODO: There might be a color variable so there could be logic in puzzle selection that prevents
-	// picking a puzzle of the same color consecutively. Even if they were different shades of the same color
-	// they could be labeled the same to keep colors well distributed.
+	public Color color;
 
 	void Start() {
 		Load();

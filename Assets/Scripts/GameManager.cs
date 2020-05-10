@@ -35,11 +35,15 @@ public class GameManager : MonoBehaviour {
 	private const int kNumberPieces = 12;
 	public int numberPiecesPlaced = 0; 
 
+	[Header("Global UI")]
+	public Image background;
+
 	// Use this for initialization
 	void Start () {
 		Debug.Log ("Welcome to Magic Puzzles");
 		//StartCoroutine(PlayScale(0.5f));
 		LoadNotes();
+		background.color = puzzles[0].color;
 		ResetPiecesStatus();
 		HideInactivePuzzles();
 	}
@@ -133,7 +137,7 @@ public class GameManager : MonoBehaviour {
 	}
 		
 	IEnumerator TransitionPuzzles(float WaitTime) {
-		Debug.Log ("Fading out animation");
+		Debug.Log ("Fading out animation");	
 		for(int i = 0; i < 80; i++) {
 			Debug.Log ("Puzzle number: " + puzzleNumber);
 			Color temp = puzzles[puzzleNumber].animation.color;
@@ -143,7 +147,7 @@ public class GameManager : MonoBehaviour {
 		}
 		puzzles[puzzleNumber].gameObject.SetActive(false);
 		puzzleNumber++;
-		Debug.Log ("Puzzle number: " + puzzleNumber);
+		background.color = Color.Lerp(puzzles[puzzleNumber - 1].color, puzzles[puzzleNumber].color, 1f);
 		StartCoroutine(SetupNewPuzzle(4f));
 	}
 

@@ -849,6 +849,7 @@ MonoBehaviour:
   - {fileID: 1731998669}
   animation: {fileID: 384511009}
   hasBeenPlayed: 0
+  color: {r: 0.07352942, g: 0.079918824, b: 1, a: 1}
 --- !u!1001 &375274578
 Prefab:
   m_ObjectHideFlags: 0
@@ -3996,6 +3997,7 @@ MonoBehaviour:
   - {fileID: 809034988}
   animation: {fileID: 1343407733}
   hasBeenPlayed: 0
+  color: {r: 0.46034467, g: 0, b: 0.75, a: 1}
 --- !u!224 &1167027025 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224969252878156266, guid: 8547ef894479d46e1b83b0d1a496266f,
@@ -6023,6 +6025,7 @@ MonoBehaviour:
   - {fileID: 1817682362}
   puzzleNumber: 0
   numberPiecesPlaced: 0
+  background: {fileID: 1510685283}
 --- !u!1 &1700563790
 GameObject:
   m_ObjectHideFlags: 0
@@ -6576,6 +6579,7 @@ MonoBehaviour:
   - {fileID: 125609457}
   animation: {fileID: 2030749952}
   hasBeenPlayed: 0
+  color: {r: 1, g: 0.08088237, b: 0.7084176, a: 1}
 --- !u!224 &1870140102 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224969252878156266, guid: 8547ef894479d46e1b83b0d1a496266f,
@@ -6917,6 +6921,7 @@ MonoBehaviour:
   - {fileID: 111370709}
   animation: {fileID: 1700563792}
   hasBeenPlayed: 0
+  color: {r: 0, g: 0.75686276, b: 0.16078432, a: 1}
 --- !u!1 &1972488476
 GameObject:
   m_ObjectHideFlags: 0
