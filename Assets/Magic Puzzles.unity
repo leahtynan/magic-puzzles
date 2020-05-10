@@ -229,7 +229,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300018, guid: 87312823d14004fdb85212c4df1b2175,
+      objectReference: {fileID: 21300018, guid: b9589a85ba3ff4354a77b34c5519c034,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8547ef894479d46e1b83b0d1a496266f, type: 2}
@@ -366,7 +366,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300022, guid: 87312823d14004fdb85212c4df1b2175,
+      objectReference: {fileID: 21300022, guid: b9589a85ba3ff4354a77b34c5519c034,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8547ef894479d46e1b83b0d1a496266f, type: 2}
@@ -744,7 +744,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 87312823d14004fdb85212c4df1b2175,
+      objectReference: {fileID: 21300000, guid: b9589a85ba3ff4354a77b34c5519c034,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8547ef894479d46e1b83b0d1a496266f, type: 2}
@@ -1549,7 +1549,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300012, guid: 87312823d14004fdb85212c4df1b2175,
+      objectReference: {fileID: 21300012, guid: b9589a85ba3ff4354a77b34c5519c034,
         type: 3}
     - target: {fileID: 114506005324804790, guid: 8547ef894479d46e1b83b0d1a496266f,
         type: 2}
@@ -1810,7 +1810,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300002, guid: 87312823d14004fdb85212c4df1b2175,
+      objectReference: {fileID: 21300002, guid: b9589a85ba3ff4354a77b34c5519c034,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8547ef894479d46e1b83b0d1a496266f, type: 2}
@@ -3891,7 +3891,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300010, guid: 87312823d14004fdb85212c4df1b2175,
+      objectReference: {fileID: 21300010, guid: b9589a85ba3ff4354a77b34c5519c034,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8547ef894479d46e1b83b0d1a496266f, type: 2}
@@ -5296,7 +5296,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300004, guid: 87312823d14004fdb85212c4df1b2175,
+      objectReference: {fileID: 21300004, guid: b9589a85ba3ff4354a77b34c5519c034,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8547ef894479d46e1b83b0d1a496266f, type: 2}
@@ -5558,7 +5558,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300006, guid: 87312823d14004fdb85212c4df1b2175,
+      objectReference: {fileID: 21300006, guid: b9589a85ba3ff4354a77b34c5519c034,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8547ef894479d46e1b83b0d1a496266f, type: 2}
@@ -6078,7 +6078,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: d91554b9d0afe4e7792044ec58cd49d7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 392560dfa1f6e46f6b7f18c6eb41c20e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6460,7 +6460,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300016, guid: 87312823d14004fdb85212c4df1b2175,
+      objectReference: {fileID: 21300016, guid: b9589a85ba3ff4354a77b34c5519c034,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8547ef894479d46e1b83b0d1a496266f, type: 2}
@@ -6697,7 +6697,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300020, guid: 87312823d14004fdb85212c4df1b2175,
+      objectReference: {fileID: 21300020, guid: b9589a85ba3ff4354a77b34c5519c034,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8547ef894479d46e1b83b0d1a496266f, type: 2}
@@ -7064,7 +7064,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300008, guid: 87312823d14004fdb85212c4df1b2175,
+      objectReference: {fileID: 21300008, guid: b9589a85ba3ff4354a77b34c5519c034,
         type: 3}
     - target: {fileID: 114497730883941156, guid: 8547ef894479d46e1b83b0d1a496266f,
         type: 2}
@@ -7220,7 +7220,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300014, guid: 87312823d14004fdb85212c4df1b2175,
+      objectReference: {fileID: 21300014, guid: b9589a85ba3ff4354a77b34c5519c034,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8547ef894479d46e1b83b0d1a496266f, type: 2}
