@@ -11,7 +11,8 @@ public class GameManager : MonoBehaviour {
 	public AudioClip[] lowOctave = new AudioClip[12]; 
 	public AudioClip[] middleOctave = new AudioClip[12]; 
 	public AudioClip[] highOctave = new AudioClip[12]; 
-	private AudioClip[,] notes = new AudioClip[3, 12]; // Notes in all octaves, loaded at Start
+	public AudioClip[] highestOctave = new AudioClip[12]; 
+	private AudioClip[,] notes = new AudioClip[5, 12]; // Notes in all octaves, loaded at Start
 	Dictionary <string, int> notesMapping = new Dictionary<string, int>()
 	{
 		{ "c", 0 },
@@ -75,7 +76,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	void LoadNotes() {
-		// Loads three octaves of musical notes into a 2D array
+		// Loads four octaves of musical notes into a 2D array
 		for (int i = 0; i < lowOctave.Length; i++) {
 			notes[0, i] = lowOctave[i];
 		}
@@ -84,6 +85,9 @@ public class GameManager : MonoBehaviour {
 		}
 		for (int i = 0; i < highOctave.Length; i++) {
 			notes[2, i] = highOctave[i];
+		}
+		for (int i = 0; i < highestOctave.Length; i++) {
+			notes[3, i] = highestOctave[i];
 		}
 	}
 
@@ -168,7 +172,7 @@ public class GameManager : MonoBehaviour {
 
 	IEnumerator PlayScale(float WaitTime) {
 		// This isn't used for anything in the interactive. It was a quick test for musical note file access.
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < 4; i++) {
 			for (int j = 0; j < 12; j++) {
 				audioSource.clip = notes[i, j];
 				audioSource.Play();

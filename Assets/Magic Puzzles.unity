@@ -3923,7 +3923,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1158271745
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6017,11 +6017,24 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0a5e6eb9232164a66899e0cc71ec3b25, type: 3}
   - {fileID: 8300000, guid: 0fecae48682ce47cbab6b1a7bf79f32a, type: 3}
   - {fileID: 8300000, guid: 2087dde0aef3b4f19adf7340a117f681, type: 3}
+  highestOctave:
+  - {fileID: 8300000, guid: 4c5d1269f060a4dadbd8d913849e9a58, type: 3}
+  - {fileID: 8300000, guid: 5c13f25b55a3c4df9bff5a0e3d11c9ff, type: 3}
+  - {fileID: 8300000, guid: 64d86b6ad0d7b4ddc9137c5c2fae7624, type: 3}
+  - {fileID: 8300000, guid: a7678e39e5c84497bbbd11c308ab53c6, type: 3}
+  - {fileID: 8300000, guid: c4210039f82004c3b9a41b30c91421ad, type: 3}
+  - {fileID: 8300000, guid: c9dee3c2b972f4ea088d38d7eaed23ff, type: 3}
+  - {fileID: 8300000, guid: 7ddbe6afd06e94e96a972767064746fd, type: 3}
+  - {fileID: 8300000, guid: ccafa8516eb1448278d6d8b292d3bba8, type: 3}
+  - {fileID: 8300000, guid: 93fb2dd00a57e4a468ac2330895ab3af, type: 3}
+  - {fileID: 8300000, guid: d225f563ac374473abb51257262db961, type: 3}
+  - {fileID: 8300000, guid: c25c3a442e72f400e9c2b07688268e29, type: 3}
+  - {fileID: 8300000, guid: 6c81341bc46a842db94138054ad32627, type: 3}
   playNoteTestButton: {fileID: 815599772}
   puzzles:
-  - {fileID: 1158271746}
-  - {fileID: 371877034}
   - {fileID: 1965505143}
+  - {fileID: 371877034}
+  - {fileID: 1158271746}
   - {fileID: 1817682362}
   puzzleNumber: 0
   numberPiecesPlaced: 0
@@ -6068,7 +6081,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1700563790}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -6847,7 +6860,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1965505142
 RectTransform:
   m_ObjectHideFlags: 0
