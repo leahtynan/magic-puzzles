@@ -1,21 +1,21 @@
 fileFormatVersion: 2
-guid: 79f4f317d8fa94cbcb957be4f3170d0a
-timeCreated: 1590973688
+guid: 8ece4bf47cbce49b48a3186254dfbeed
+timeCreated: 1590971175
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: todd-turtle_animation-frames_slices_0
-    21300002: todd-turtle_animation-frames_slices_1
-    21300004: todd-turtle_animation-frames_slices_2
-    21300006: todd-turtle_animation-frames_slices_3
-    21300008: todd-turtle_animation-frames_slices_4
-    21300010: todd-turtle_animation-frames_slices_5
-    21300012: todd-turtle_animation-frames_slices_6
-    21300014: todd-turtle_animation-frames_slices_7
-    21300016: todd-turtle_animation-frames_slices_8
-    21300018: todd-turtle_animation-frames_slices_9
-    21300020: todd-turtle_animation-frames_slices_10
-    21300022: todd-turtle_animation-frames_slices_11
+    21300000: steph-whale_animation-frames_slices_0
+    21300002: steph-whale_animation-frames_slices_1
+    21300004: steph-whale_animation-frames_slices_2
+    21300006: steph-whale_animation-frames_slices_3
+    21300008: steph-whale_animation-frames_slices_4
+    21300010: steph-whale_animation-frames_slices_5
+    21300012: steph-whale_animation-frames_slices_6
+    21300014: steph-whale_animation-frames_slices_7
+    21300016: steph-whale_animation-frames_slices_8
+    21300018: steph-whale_animation-frames_slices_9
+    21300020: steph-whale_animation-frames_slices_10
+    21300022: steph-whale_animation-frames_slices_11
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -98,7 +98,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: todd-turtle_animation-frames_slices_0
+      name: steph-whale_animation-frames_slices_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,7 +111,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: todd-turtle_animation-frames_slices_1
+      name: steph-whale_animation-frames_slices_1
       rect:
         serializedVersion: 2
         x: 330
@@ -124,7 +124,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: todd-turtle_animation-frames_slices_2
+      name: steph-whale_animation-frames_slices_2
       rect:
         serializedVersion: 2
         x: 660
@@ -137,7 +137,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: todd-turtle_animation-frames_slices_3
+      name: steph-whale_animation-frames_slices_3
       rect:
         serializedVersion: 2
         x: 990
@@ -150,7 +150,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: todd-turtle_animation-frames_slices_4
+      name: steph-whale_animation-frames_slices_4
       rect:
         serializedVersion: 2
         x: 0
@@ -163,7 +163,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: todd-turtle_animation-frames_slices_5
+      name: steph-whale_animation-frames_slices_5
       rect:
         serializedVersion: 2
         x: 330
@@ -176,7 +176,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: todd-turtle_animation-frames_slices_6
+      name: steph-whale_animation-frames_slices_6
       rect:
         serializedVersion: 2
         x: 660
@@ -189,7 +189,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: todd-turtle_animation-frames_slices_7
+      name: steph-whale_animation-frames_slices_7
       rect:
         serializedVersion: 2
         x: 990
@@ -202,7 +202,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: todd-turtle_animation-frames_slices_8
+      name: steph-whale_animation-frames_slices_8
       rect:
         serializedVersion: 2
         x: 0
@@ -215,7 +215,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: todd-turtle_animation-frames_slices_9
+      name: steph-whale_animation-frames_slices_9
       rect:
         serializedVersion: 2
         x: 330
@@ -228,7 +228,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: todd-turtle_animation-frames_slices_10
+      name: steph-whale_animation-frames_slices_10
       rect:
         serializedVersion: 2
         x: 660
@@ -241,7 +241,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: todd-turtle_animation-frames_slices_11
+      name: steph-whale_animation-frames_slices_11
       rect:
         serializedVersion: 2
         x: 990
