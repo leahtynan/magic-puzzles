@@ -1004,7 +1004,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300014, guid: 916dd9b9de89c4a6c9723ae8c30ed102,
+      objectReference: {fileID: 21300014, guid: a8e4a055eeaae4d3aab1ec6322da5650,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8547ef894479d46e1b83b0d1a496266f, type: 2}
@@ -2255,7 +2255,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300006, guid: 916dd9b9de89c4a6c9723ae8c30ed102,
+      objectReference: {fileID: 21300006, guid: a8e4a055eeaae4d3aab1ec6322da5650,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8547ef894479d46e1b83b0d1a496266f, type: 2}
@@ -2751,7 +2751,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300018, guid: 916dd9b9de89c4a6c9723ae8c30ed102,
+      objectReference: {fileID: 21300018, guid: a8e4a055eeaae4d3aab1ec6322da5650,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8547ef894479d46e1b83b0d1a496266f, type: 2}
@@ -4876,7 +4876,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300002, guid: 916dd9b9de89c4a6c9723ae8c30ed102,
+      objectReference: {fileID: 21300002, guid: a8e4a055eeaae4d3aab1ec6322da5650,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8547ef894479d46e1b83b0d1a496266f, type: 2}
@@ -4991,7 +4991,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300008, guid: 916dd9b9de89c4a6c9723ae8c30ed102,
+      objectReference: {fileID: 21300008, guid: a8e4a055eeaae4d3aab1ec6322da5650,
         type: 3}
     - target: {fileID: 114497730883941156, guid: 8547ef894479d46e1b83b0d1a496266f,
         type: 2}
@@ -5522,7 +5522,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 916dd9b9de89c4a6c9723ae8c30ed102,
+      objectReference: {fileID: 21300000, guid: a8e4a055eeaae4d3aab1ec6322da5650,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8547ef894479d46e1b83b0d1a496266f, type: 2}
@@ -5763,7 +5763,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300004, guid: 916dd9b9de89c4a6c9723ae8c30ed102,
+      objectReference: {fileID: 21300004, guid: a8e4a055eeaae4d3aab1ec6322da5650,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8547ef894479d46e1b83b0d1a496266f, type: 2}
@@ -5993,7 +5993,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300010, guid: 916dd9b9de89c4a6c9723ae8c30ed102,
+      objectReference: {fileID: 21300010, guid: a8e4a055eeaae4d3aab1ec6322da5650,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8547ef894479d46e1b83b0d1a496266f, type: 2}
@@ -6310,7 +6310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0.7073023, a: 1}
+  m_Color: {r: 0.5018843, g: 0, b: 0.859, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -6966,7 +6966,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300012, guid: 916dd9b9de89c4a6c9723ae8c30ed102,
+      objectReference: {fileID: 21300012, guid: a8e4a055eeaae4d3aab1ec6322da5650,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8547ef894479d46e1b83b0d1a496266f, type: 2}
@@ -7505,7 +7505,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300022, guid: 916dd9b9de89c4a6c9723ae8c30ed102,
+      objectReference: {fileID: 21300022, guid: a8e4a055eeaae4d3aab1ec6322da5650,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8547ef894479d46e1b83b0d1a496266f, type: 2}
@@ -7898,7 +7898,7 @@ GameObject:
   - component: {fileID: 1817682361}
   - component: {fileID: 1817682362}
   m_Layer: 0
-  m_Name: LeahPinkSloth
+  m_Name: LeahRedSloth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7977,7 +7977,7 @@ MonoBehaviour:
   - {fileID: 125609457}
   animation: {fileID: 2030749952}
   hasBeenPlayed: 0
-  color: {r: 0.57716507, g: 0.028384497, b: 0.77205884, a: 1}
+  color: {r: 0.5019608, g: 0, b: 0.85882354, a: 1}
 --- !u!1001 &1818499141
 Prefab:
   m_ObjectHideFlags: 0
@@ -8351,7 +8351,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300020, guid: 916dd9b9de89c4a6c9723ae8c30ed102,
+      objectReference: {fileID: 21300020, guid: a8e4a055eeaae4d3aab1ec6322da5650,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8547ef894479d46e1b83b0d1a496266f, type: 2}
@@ -9085,7 +9085,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0dc897a5888104c41b3e800f28e18fed, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d33a18460c4c14ecb813eb65076f2597, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9550,7 +9550,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300016, guid: 916dd9b9de89c4a6c9723ae8c30ed102,
+      objectReference: {fileID: 21300016, guid: a8e4a055eeaae4d3aab1ec6322da5650,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8547ef894479d46e1b83b0d1a496266f, type: 2}
