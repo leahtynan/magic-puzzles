@@ -28,25 +28,37 @@ public class GameManager : MonoBehaviour {
 		{ "bf", 10 },
 		{ "b", 11 }
 	};
-	public Button playNoteTestButton;
 
 	[Header("Puzzles")]
 	public PuzzleManager[] puzzles;
-	public int puzzleNumber = 0; // Which puzzle the user is on
+	public int puzzleNumber; // Which puzzle the user is on
 	private const int kNumberPieces = 12;
-	public int numberPiecesPlaced = 0; 
+	public int numberPiecesPlaced; 
 
 	[Header("Global UI")]
 	public Image background;
+	public GameObject endScreen; // "Fin" and "Start Over" button
 
 	// Use this for initialization
 	void Start () {
 		Debug.Log ("Welcome to Magic Puzzles");
 		//StartCoroutine(PlayScale(0.5f));
 		LoadNotes();
+		endScreen.SetActive(false);
+		StartOver();
+	}
+
+	public void StartOver() {
+		// Sets up the first puzzle and hides all others
+		// Initializes all data around activity progression
+		Debug.Log("Starting over...");
 		background.color = puzzles[0].color;
+		puzzleNumber = 0;
+		numberPiecesPlaced = 0;
+		puzzles[0].gameObject.SetActive(true);
 		ResetPiecesStatus();
 		HideInactivePuzzles();
+		endScreen.SetActive(false);
 	}
 
 	void HideInactivePuzzles() {
@@ -64,6 +76,11 @@ public class GameManager : MonoBehaviour {
 				piece.viewer.art.color = temp;
 			}
 		}
+	}
+
+	void ResetPuzzleArtOpacity() {
+		// As puzzles are completed, all the art (pieces and animation fade out)
+		// Need to reset to 100% in case the user wants to play again
 	}
 
 	void ResetPiecesStatus() {
@@ -102,9 +119,6 @@ public class GameManager : MonoBehaviour {
 		int note = Convert.ToInt32(notesMapping[noteToPlay[1]]);
 		audioSource.clip = notes[octave, note];
 		audioSource.Play();
-		if (numberPiecesPlaced == kNumberPieces) {
-			playNoteTestButton.interactable = false;
-		} 
 	}
 
 	string[] MapNoteToPlay(string shortHand) {
@@ -129,11 +143,19 @@ public class GameManager : MonoBehaviour {
 		foreach (PuzzlePieceManager piece in puzzles[puzzleNumber].puzzlePieces) {
 			piece.viewer.ChangeOpacity("hidden");
 		}
-		// 3. Play the song twice
-		for (int i = 0; i < 2; i++) {
+		// 3. Play the song 
+		if (puzzleNumber < (puzzles.Length - 1)) {
+			// Most of the time, play the song twice
+			for (int i = 0; i < 2; i++) {
+				audioSource.clip = puzzles[puzzleNumber].recordedSong;
+				audioSource.Play ();
+				yield return new WaitForSeconds (audioSource.clip.length);
+			}
+		} else {
+			// The finale song is really long, so only play it once before moving to the end screen
 			audioSource.clip = puzzles[puzzleNumber].recordedSong;
-			audioSource.Play();
-			yield return new WaitForSeconds(audioSource.clip.length);
+			audioSource.Play ();
+			yield return new WaitForSeconds (audioSource.clip.length);
 		}
 		puzzles[puzzleNumber].hasBeenPlayed = true;
 		// 4. Transition to the next puzzle
@@ -151,8 +173,17 @@ public class GameManager : MonoBehaviour {
 		}
 		puzzles[puzzleNumber].gameObject.SetActive(false);
 		puzzleNumber++;
-		background.color = Color.Lerp(puzzles[puzzleNumber - 1].color, puzzles[puzzleNumber].color, 1f);
-		StartCoroutine(SetupNewPuzzle(4f));
+		if (puzzleNumber < puzzles.Length) {
+			StartCoroutine (SetupNewPuzzle (4f));
+			background.color = Color.Lerp(puzzles[puzzleNumber - 1].color, puzzles[puzzleNumber].color, 1f);
+		} else {
+			ShowEndScreen();
+		}
+	}
+
+	void ShowEndScreen() {
+		background.color = Color.Lerp(puzzles[puzzles.Length - 1].color, Color.black, 1f);
+		endScreen.SetActive(true);
 	}
 
 	IEnumerator SetupNewPuzzle(float WaitTime) {

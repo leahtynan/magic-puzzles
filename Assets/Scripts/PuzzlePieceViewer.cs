@@ -60,7 +60,7 @@ public class PuzzlePieceViewer : MonoBehaviour, IPointerEnterHandler, IPointerEx
 	public void ChangeOpacity(string state) {
 		if (state == "dim") {
 			Color temp = art.color;
-			temp.a = 0.5f;
+			temp.a = 0.35f;
 			art.color = temp;
 		} else if (state == "hidden") {
 			art.enabled = false;
