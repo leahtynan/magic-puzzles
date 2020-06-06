@@ -13,10 +13,6 @@ public class PuzzleManager : MonoBehaviour {
 	public bool hasBeenPlayed; 
 	public Color color;
 
-	void Start() {
-		Load();
-	}
-
 	void Update() {
 		if (isLoaded) {
 			foreach (PuzzlePieceManager piece in puzzlePieces) {

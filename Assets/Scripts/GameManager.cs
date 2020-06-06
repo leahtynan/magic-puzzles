@@ -44,7 +44,6 @@ public class GameManager : MonoBehaviour {
 		Debug.Log ("Welcome to Magic Puzzles");
 		//StartCoroutine(PlayScale(0.5f));
 		LoadNotes();
-		endScreen.SetActive(false);
 		StartOver();
 	}
 
@@ -55,10 +54,11 @@ public class GameManager : MonoBehaviour {
 		background.color = puzzles[0].color;
 		puzzleNumber = 0;
 		numberPiecesPlaced = 0;
-		puzzles[0].gameObject.SetActive(true);
 		ResetPiecesStatus();
 		HideInactivePuzzles();
+		ResetAnimationOpacity();
 		endScreen.SetActive(false);
+		StartCoroutine(SetupPuzzle(4f));
 	}
 
 	void HideInactivePuzzles() {
@@ -78,9 +78,14 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
-	void ResetPuzzleArtOpacity() {
-		// As puzzles are completed, all the art (pieces and animation fade out)
-		// Need to reset to 100% in case the user wants to play again
+	void ResetAnimationOpacity() {
+		// As puzzles are completed, the animation image UI fade outs
+		// Need to bring it back if the player is playing again
+		foreach (PuzzleManager puzzle in puzzles) {
+			Color temp = puzzle.animation.color;
+			temp.a = 1f;
+			puzzle.animation.color = temp;
+		}
 	}
 
 	void ResetPiecesStatus() {
@@ -146,6 +151,7 @@ public class GameManager : MonoBehaviour {
 		// 3. Play the song 
 		if (puzzleNumber < (puzzles.Length - 1)) {
 			// Most of the time, play the song twice
+			Debug.Log("got here");
 			for (int i = 0; i < 2; i++) {
 				audioSource.clip = puzzles[puzzleNumber].recordedSong;
 				audioSource.Play ();
@@ -174,7 +180,7 @@ public class GameManager : MonoBehaviour {
 		puzzles[puzzleNumber].gameObject.SetActive(false);
 		puzzleNumber++;
 		if (puzzleNumber < puzzles.Length) {
-			StartCoroutine (SetupNewPuzzle (4f));
+			StartCoroutine(SetupPuzzle (4f));
 			background.color = Color.Lerp(puzzles[puzzleNumber - 1].color, puzzles[puzzleNumber].color, 1f);
 		} else {
 			ShowEndScreen();
@@ -186,11 +192,20 @@ public class GameManager : MonoBehaviour {
 		endScreen.SetActive(true);
 	}
 
-	IEnumerator SetupNewPuzzle(float WaitTime) {
+	IEnumerator SetupPuzzle(float WaitTime) {
+		// TODO: After this runs, there is an occassional bug where pieces sometimes do not darken when placed
 		Debug.Log ("Showing new puzzle");
 		// 1. Activate the puzzle game object
 		puzzles[puzzleNumber].gameObject.SetActive(true);
-		// 2. Fade in each puzzle piece
+		// 2. De-active the animation UI image
+		puzzles[puzzleNumber].animation.enabled = false;
+		// 3. Shuffle the puzzle pieces
+		puzzles[puzzleNumber].Load();
+		// 3. Enable the puzzle pieces image UI
+		foreach (PuzzlePieceManager piece in puzzles[puzzleNumber].puzzlePieces) {
+			piece.viewer.art.enabled = true;
+		}
+		// 5. Fade in each puzzle piece
 		for(int i = 0; i < 80; i++) {
 			foreach (PuzzlePieceManager piece in puzzles[puzzleNumber].puzzlePieces) {
 				Color temp = piece.viewer.art.color;
