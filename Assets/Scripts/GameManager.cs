@@ -193,7 +193,6 @@ public class GameManager : MonoBehaviour {
 	}
 
 	IEnumerator SetupPuzzle(float WaitTime) {
-		// TODO: After this runs, there is an occassional bug where pieces sometimes do not darken when placed
 		Debug.Log ("Showing new puzzle");
 		// 1. Activate the puzzle game object
 		puzzles[puzzleNumber].gameObject.SetActive(true);
@@ -206,13 +205,14 @@ public class GameManager : MonoBehaviour {
 			piece.viewer.art.enabled = true;
 		}
 		// 5. Fade in each puzzle piece
-		for(int i = 0; i < 80; i++) {
+		for(int i = 0; i < 20; i++) {
 			foreach (PuzzlePieceManager piece in puzzles[puzzleNumber].puzzlePieces) {
 				Color temp = piece.viewer.art.color;
 				temp.a += 0.05f;
 				piece.viewer.art.color = temp;
+				Debug.Log("Alpha: + " + temp.a);
 			}
-			yield return new WaitForSeconds(0.05f);
+			yield return new WaitForSeconds(0.025f);
 		}
 	}
 
