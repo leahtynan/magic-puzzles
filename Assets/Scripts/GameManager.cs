@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour {
 
 	[Header("Global UI")]
 	public Image background;
+	public Image screen; // Translucent black screen between the background and puzzle, helps puzzle stand out
 	public GameObject endScreen; // "Fin" and "Start Over" button
 
 	// Use this for initialization
@@ -134,7 +135,6 @@ public class GameManager : MonoBehaviour {
 
 	void CheckPuzzleCompletion() {
 		if (numberPiecesPlaced == kNumberPieces) {
-			Debug.Log ("Puzzle completed!");
 			StartCoroutine(AnimateAndSing(1f));
 			numberPiecesPlaced = 0;
 		}
@@ -151,7 +151,6 @@ public class GameManager : MonoBehaviour {
 		// 3. Play the song 
 		if (puzzleNumber < (puzzles.Length - 1)) {
 			// Most of the time, play the song twice
-			Debug.Log("got here");
 			for (int i = 0; i < 2; i++) {
 				audioSource.clip = puzzles[puzzleNumber].recordedSong;
 				audioSource.Play ();
@@ -169,9 +168,8 @@ public class GameManager : MonoBehaviour {
 	}
 		
 	IEnumerator TransitionPuzzles(float WaitTime) {
-		Debug.Log ("Fading out animation");	
+		// Fade out the puzzle pieces
 		for(int i = 0; i < 80; i++) {
-			Debug.Log ("Puzzle number: " + puzzleNumber);
 			Color temp = puzzles[puzzleNumber].animation.color;
 			temp.a -= 0.05f;
 			puzzles[puzzleNumber].animation.color = temp;
@@ -208,9 +206,8 @@ public class GameManager : MonoBehaviour {
 		for(int i = 0; i < 20; i++) {
 			foreach (PuzzlePieceManager piece in puzzles[puzzleNumber].puzzlePieces) {
 				Color temp = piece.viewer.art.color;
-				temp.a += 0.05f;
+				temp.a += 0.04f;
 				piece.viewer.art.color = temp;
-				Debug.Log("Alpha: + " + temp.a);
 			}
 			yield return new WaitForSeconds(0.025f);
 		}

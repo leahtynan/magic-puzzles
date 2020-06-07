@@ -45,7 +45,6 @@ public class PuzzlePieceViewer : MonoBehaviour, IPointerEnterHandler, IPointerEx
 				ChangeOpacity("dim");
 			}
 		// b. Rotate the piece a random angle at start 
-		// TODO: May need to reset all pieces to angle 0  before doing this
 		// When we have multiple puzzles solved in sequence
 		} else {
 			rectTransform.Rotate(new Vector3(0, 0, puzzlePieceManager.angle));
@@ -60,7 +59,7 @@ public class PuzzlePieceViewer : MonoBehaviour, IPointerEnterHandler, IPointerEx
 	public void ChangeOpacity(string state) {
 		if (state == "dim") {
 			Color temp = art.color;
-			temp.a = 0.35f;
+			temp.a = 0.25f;
 			art.color = temp;
 		} else if (state == "hidden") {
 			art.enabled = false;
