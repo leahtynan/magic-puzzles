@@ -2,6 +2,8 @@
 
 These digital puzzles play music as pieces are placed. When the puzzle is complete, the entire song plays continuously and the picture animates. 
 
-Currently, I have original content for two puzzles (at time of writing, just one is in the interactive), and when complete this software will feature 5-10 puzzles. My musician friends are generously offering their time and creativity to compose the music.
+This application contains five puzzles played in sequence. Four musician friends generously offered their time and creativity to compose the music (the song for the fifth puzzle (sloth) was written by me).
 
-I'm creating original hand-drawn art for the puzzles and playing my acoustic piano to generate the audio featured in the software.
+I created original hand-drawn animation frames for the puzzles, which were converted into vector art and layered onto dramatically colorized photos from around my neighborhood. The starting point for the art came from the musicians: when I asked if they would contribute music, I also asked for their favorite animal and color. I started monochrome (e.g. blue ferret on light blue background), and shifted to dual tone with super bright colors (inspired by street art such as graffiti and skateboard art). 
+
+The audio is all acoustic piano, mostly played by me on my home piano (the exception is the yellow whale puzzle, which was recorded by the musician).
