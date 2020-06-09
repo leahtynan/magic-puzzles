@@ -149,19 +149,9 @@ public class GameManager : MonoBehaviour {
 			piece.viewer.ChangeOpacity("hidden");
 		}
 		// 3. Play the song 
-		if (puzzleNumber < (puzzles.Length - 1)) {
-			// Most of the time, play the song twice
-			for (int i = 0; i < 2; i++) {
-				audioSource.clip = puzzles[puzzleNumber].recordedSong;
-				audioSource.Play ();
-				yield return new WaitForSeconds (audioSource.clip.length);
-			}
-		} else {
-			// The finale song is really long, so only play it once before moving to the end screen
-			audioSource.clip = puzzles[puzzleNumber].recordedSong;
-			audioSource.Play ();
-			yield return new WaitForSeconds (audioSource.clip.length);
-		}
+		audioSource.clip = puzzles[puzzleNumber].recordedSong;
+		audioSource.Play ();
+		yield return new WaitForSeconds (audioSource.clip.length);
 		puzzles[puzzleNumber].hasBeenPlayed = true;
 		// 4. Transition to the next puzzle
 		StartCoroutine(TransitionPuzzles(4f));
@@ -169,17 +159,17 @@ public class GameManager : MonoBehaviour {
 		
 	IEnumerator TransitionPuzzles(float WaitTime) {
 		// Fade out the puzzle pieces
-		for(int i = 0; i < 80; i++) {
+		for(int i = 0; i < 40; i++) {
 			Color temp = puzzles[puzzleNumber].animation.color;
-			temp.a -= 0.05f;
+			temp.a -= 0.025f;
 			puzzles[puzzleNumber].animation.color = temp;
-			yield return new WaitForSeconds(0.05f);
+			yield return new WaitForSeconds(0.035f);
 		}
 		puzzles[puzzleNumber].gameObject.SetActive(false);
 		puzzleNumber++;
 		if (puzzleNumber < puzzles.Length) {
 			StartCoroutine(SetupPuzzle (4f));
-			background.color = Color.Lerp(puzzles[puzzleNumber - 1].color, puzzles[puzzleNumber].color, 1f);
+			background.color = Color.Lerp(puzzles[puzzleNumber - 1].color, puzzles[puzzleNumber].color, 5f);
 		} else {
 			ShowEndScreen();
 		}
@@ -203,13 +193,13 @@ public class GameManager : MonoBehaviour {
 			piece.viewer.art.enabled = true;
 		}
 		// 5. Fade in each puzzle piece
-		for(int i = 0; i < 20; i++) {
+		for(int i = 0; i < 40; i++) {
 			foreach (PuzzlePieceManager piece in puzzles[puzzleNumber].puzzlePieces) {
 				Color temp = piece.viewer.art.color;
-				temp.a += 0.04f;
+				temp.a += 0.025f;
 				piece.viewer.art.color = temp;
 			}
-			yield return new WaitForSeconds(0.025f);
+			yield return new WaitForSeconds(0.035f);
 		}
 	}
 
