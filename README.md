@@ -4,6 +4,7 @@ These digital puzzles play music as pieces are placed. When the puzzle is comple
 
 <a href="http://leahtynan.com/magic-puzzles">Play Magic Puzzles</a>
 
+![Magic Puzzles demo](https://leahtynan.com/magic-puzzles/TemplateData/magic-puzzles-demo.gif)
 
 This application contains five puzzles played in sequence. Four musician friends generously offered their time and creativity to compose the music (the song for the fifth puzzle (sloth) was written by me).
 
